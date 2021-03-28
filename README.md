@@ -4,6 +4,7 @@
 **Area of Interest: Medicine in Data Science 💊⚕️**
 ![Banner](https://github.com/ranjiGT/ranjiGT/blob/main/Copy%20of%20Copy%20of%20CONTENT%20CREATOR%20AUTHOR%20SCIENTIST.png)
 
+#Latest video
 [![Latest video](https://img.youtube.com/vi/3dI4_YnQo6s/maxresdefault.jpg)](https://youtu.be/3dI4_YnQo6s)
 
 ## Some of my Github Stats
