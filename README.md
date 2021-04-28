@@ -5,6 +5,7 @@
 - :monocle_face: Currently looking for `Internship` roles in the field of ML
 - :busts_in_silhouette: Cisgender: `He-him-his-er-seine-ihn`
 - :bulb: Currently doing project(s) in `NLP/CV`
+- :seedling: As you sow, so shall you reap
 
 ![](https://github.com/ranjiGT/ranjiGT/blob/main/shine.svg)
 
