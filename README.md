@@ -4,7 +4,7 @@
 - Area of Interest: `Medicine in Data Science` ⚕️
 - Currently looking for `Internship` roles in the field of ML
 - Cisgender: `He-him-his-er-seine-ihn`
-- Currently doing project(s) in NLP/CV
+- Currently doing project(s) in `NLP/CV`
 
 ![](https://github.com/ranjiGT/ranjiGT/blob/main/shine.svg)
 
