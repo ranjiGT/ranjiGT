@@ -3,7 +3,7 @@
 [![Linkedin Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/reng99/) [![Twitter Badge](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/iamranjiraj)  [![Medium Badge](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://ranjiraj4141.medium.com/)<p align='left'>I am currently a Sophomore :man_student: at the University of Magdeburg, Germany. Also a YouTube content creator, an author and loves to teach and mentor data science related topics. Originally from 🇮🇳 presently located at 🇩🇪 </p><p align='left'> You can view my resume <a href='https://rpubs.com/ranjiraj9/powerresume ' target=_blank><u>here</u>.</a></p>
 - :medical_symbol: Area of Interest: `Medicine in Data Science` 
 - :monocle_face: Currently looking for `Internship` roles in the field of ML
-- :busts_in_silhouette: Cisgender: `He-him-his-er-seine-ihn`
+- :busts_in_silhouette: Possessiveness: `He-him-his-er-seine-ihn`
 - :bulb: Currently doing project(s) in `NLP/CV`
 - :seedling: As you sow, so shall you reap
 
