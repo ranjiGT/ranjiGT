@@ -14,4 +14,4 @@
 <p align=left> <img src=https://komarev.com/ghpvc/?username=ranjiGT alt=ranjiGT /> </p>
 
 [![Github stats](https://github-readme-stats.vercel.app/api?username=ranjiGT&theme=blue-green)](https://github.com/ranjiGT/github-readme-stats)
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ranjiGT&layout=compact)](https://github.com/ranjiGT/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ranjiGT&theme=blue-green)](https://github.com/ranjiGT/github-readme-stats)
