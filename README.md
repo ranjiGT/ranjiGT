@@ -7,6 +7,7 @@
 - :bulb: Currently doing project(s) in `NLP/CV`
 - :seedling: As you sow, so shall you reap
 - :shield:  [`Python`](https://www.linkedin.com/in/reng99/detail/assessments/Python/report/)
+- :shield: [`R`](https://www.linkedin.com/in/reng99/detail/assessments/R/report/)
    
 
 ![](https://github.com/ranjiGT/ranjiGT/blob/main/shine.svg)
