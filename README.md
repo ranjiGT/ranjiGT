@@ -6,7 +6,7 @@
 - :busts_in_silhouette: Possessiveness: `He-him-his-er-seine-ihn`
 - :bulb: Currently doing project(s) in `NLP/CV`
 - :seedling: As you sow, so shall you reap
-- :shield:  ![`Python`](https://www.linkedin.com/in/reng99/detail/assessments/Python/report/)
+- :shield:  ![Python](https://www.linkedin.com/in/reng99/detail/assessments/Python/report/)
    
 
 ![](https://github.com/ranjiGT/ranjiGT/blob/main/shine.svg)
