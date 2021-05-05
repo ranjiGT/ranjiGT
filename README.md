@@ -6,6 +6,7 @@
 - :busts_in_silhouette: Possessiveness: `He-him-his-er-seine-ihn`
 - :bulb: Currently doing project(s) in `NLP/CV`
 - :seedling: As you sow, so shall you reap
+- Badges: :shield:
 
 ![](https://github.com/ranjiGT/ranjiGT/blob/main/shine.svg)
 
