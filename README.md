@@ -5,7 +5,7 @@
 - :monocle_face: Currently looking for `Internship / Research assistant` roles in the field of ML
 - :busts_in_silhouette: Possessiveness: `He-him-his-er-seine-ihn`
 - :bulb: Currently doing project(s) in `NLP/CV`
-- :seedling: As you sow [at the right place], so shall you reap
+- :seedling: As you sow _at the right place_, so shall you reap
 - :shield:  [`Python`](https://www.linkedin.com/in/reng99/detail/assessments/Python/report/)
 - :shield: [`R`](https://www.linkedin.com/in/reng99/detail/assessments/R/report/)
    
