@@ -8,7 +8,7 @@
 - :shield:  [`Python`](https://www.linkedin.com/in/reng99/detail/assessments/Python/report/)
 - :shield: [`R`](https://www.linkedin.com/in/reng99/detail/assessments/R/report/)
    
-                                                             स्वावलंबी
+                                                       स्वावलंबी
 
 ![](https://github.com/ranjiGT/ranjiGT/blob/main/shine.svg)
 
