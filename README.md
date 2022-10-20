@@ -6,7 +6,7 @@
 - :seedling: As you sow _at the right place_, so shall you reap
 
 
-![](https://github.com/ranjiGT/ranjiGT/blob/main/Screenshot 2022-10-20 111100.png)
+![](https://github.com/ranjiGT/ranjiGT/blob/main/Roles.png)
    
                                                        स्वावलंबी
 
