@@ -13,8 +13,14 @@
 <!-- BEGIN YOUTUBE-CARDS -->
 <!-- END YOUTUBE-CARDS -->
 
+## 🔥Interpretation about Data
+
 ![](https://github.com/ranjiGT/ranjiGT/blob/main/Roles.png)
 
+
+## 🔥The Data Inside Us
+
+![](https://github.com/ranjiGT/ranjiGT/blob/main/chakras.png)
 
 ## Some of my Github Stats
 <p align=left> <img src=https://komarev.com/ghpvc/?username=ranjiGT alt=ranjiGT /> </p>
