@@ -5,7 +5,7 @@
 
 
 <p align="center">
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=Data+Analyst+%26+Content+Creator;4%2B+Years+Experience+as+Data+Analyst;M.Sc.+in+Data+Science+from+Germany" alt="Typing SVG" /></a></p>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=Data+Analyst+and+Content+Creator;4%2B+Years+Experience+as+Data+Analyst;M.Sc.+in+Data+Science+from+Germany" alt="Typing SVG" /></a></p>
 
 <!-- Social icons section -->
 <p align="center">
@@ -46,19 +46,23 @@
 <!-- END YOUTUBE-CARDS -->
 
 
+## 📊 Github stats
 
-## 🔥Interpretation about Data
+<!-- https://github.com/anuraghazra/github-readme-stats -->
+<details> 
+  <summary>💻 GitHub Profile Stats</summary>
+  <br/>
+    <a href="https://github.com/anuraghazra/github-readme-stats"><img alt="Ranji Raj's Github Stats" src="https://denvercoder1-github-readme-stats.vercel.app/api/?username=ranjiGT&show_icons=true&include_all_commits=true&count_private=true&theme=react&hide_border=true&bg_color=1F222E&title_color=F85D7F&icon_color=F8D866" height="192px"/></a>
+  <a href="https://github.com/anuraghazra/github-readme-stats"><img alt="Ranji Raj's Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ranjiGT&langs_count=8&layout=compact&theme=react&hide_border=true&bg_color=1F222E&title_color=F85D7F&icon_color=F8D866&hide=Jupyter%20Notebook" height="192px"/></a>
+  <br/>
+  
+</details>
 
-![](https://github.com/ranjiGT/ranjiGT/blob/main/Roles.png)
 
-
-## Some of my Github Stats
-<p align=left> <img src=https://komarev.com/ghpvc/?username=ranjiGT alt=ranjiGT /> </p>
 
 ## 🔥Streak Stats
 [![GitHub Streak](https://streak-stats.demolab.com/?user=ranjiGT)](https://git.io/streak-stats)
 
-[![Ranji's GitHub stats](https://github-readme-stats.vercel.app/api?username=ranjiGT)](https://github.com/ranjiGT/github-readme-stats)
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ranjiGT&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
 
 
