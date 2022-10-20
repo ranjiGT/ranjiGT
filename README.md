@@ -14,7 +14,7 @@
 ## Some of my Github Stats
 <p align=left> <img src=https://komarev.com/ghpvc/?username=ranjiGT alt=ranjiGT /> </p>
 
-
+## 🔥Streak Stats
 [![GitHub Streak](https://streak-stats.demolab.com/?user=ranjiGT)](https://git.io/streak-stats)
 
 [![Ranji's GitHub stats](https://github-readme-stats.vercel.app/api?username=ranjiGT)](https://github.com/ranjiGT/github-readme-stats)
