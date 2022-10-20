@@ -9,7 +9,7 @@
 
 <!-- Social icons section -->
 <p align="center">
-  <a href="https://www.youtube.com/c/RanjiRaj18"><img width="32px" alt="Youtube" title="Youtube" src="https://i.imgur.com/qiXu7b2.png"/></a>
+  <a href="https://www.youtube.com/c/RanjiRaj18"><img width="32px" alt="Youtube" title="Youtube" src="https://simpleicons.now.sh/youtube/DB1F48"/></a>
   &#8287;&#8287;&#8287;&#8287;&#8287;
   <a href="https://www.linkedin.com/in/reng99/"><img width="32px" alt="Youtube" title="Youtube" src="https://simpleicons.now.sh/linkedin/0A66C2"/></a>
   &#8287;&#8287;&#8287;&#8287;&#8287;
