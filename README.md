@@ -8,10 +8,8 @@
 
 ![](https://github.com/ranjiGT/ranjiGT/blob/main/shine.svg)
 
-## 🔥The Data Inside Us and Its Visualization is Energy Dimensions
 
-![](https://github.com/ranjiGT/ranjiGT/blob/main/chakra-gif-7.gif) 
-
+## 🔥My Recent YouTube Lessons
 
 <!-- BEGIN YOUTUBE-CARDS -->
 [![Data Science Interview Series | Part 03](https://ytcards.demolab.com/?id=OmxxZ_wMT6M&title=Data+Science+Interview+Series+%7C+Part+03&lang=en&timestamp=1631873207&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250 "Data Science Interview Series | Part 03")](https://www.youtube.com/watch?v=OmxxZ_wMT6M)
@@ -22,10 +20,15 @@
 [![Machine Learning | Safe Semi-Supervised Learning](https://ytcards.demolab.com/?id=7FfbeSf-0L8&title=Machine+Learning+%7C+Safe+Semi-Supervised+Learning&lang=en&timestamp=1629457399&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250 "Machine Learning | Safe Semi-Supervised Learning")](https://www.youtube.com/watch?v=7FfbeSf-0L8)
 <!-- END YOUTUBE-CARDS -->
 
+
+## 🔥The Data Inside Us and Its Visualization in Energy Dimensions
+
+<p align=center> ![](https://github.com/ranjiGT/ranjiGT/blob/main/chakra-gif-7.gif) </p>
+
+
 ## 🔥Interpretation about Data
 
 ![](https://github.com/ranjiGT/ranjiGT/blob/main/Roles.png)
-
 
 
 ## Some of my Github Stats
