@@ -11,7 +11,9 @@
 <p align="center">
   <a href="https://www.youtube.com/c/RanjiRaj18"><img width="32px" alt="Youtube" title="Youtube" src="https://i.imgur.com/qiXu7b2.png"/></a>
   &#8287;&#8287;&#8287;&#8287;&#8287;
-  <a href="https://twitter.com/iamRanjiRaj"><img width="32px" alt="Twitter" title="Twitter" src="https://i.imgur.com/OXZM1L6.png"/></a>
+  <a href="https://www.linkedin.com/in/reng99/"><img width="32px" alt="Youtube" title="Youtube" src="https://simpleicons.now.sh/linkedin/0A66C2"/></a>
+  &#8287;&#8287;&#8287;&#8287;&#8287;
+  <a href="https://twitter.com/iamRanjiRaj"><img width="32px" alt="Twitter" title="Twitter" src="https://simpleicons.now.sh/twitter/1DA1F2"/></a>
   &#8287;&#8287;&#8287;&#8287;&#8287;
 </p>
 
