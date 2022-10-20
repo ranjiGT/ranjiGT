@@ -6,14 +6,11 @@
 - :busts_in_silhouette: Possessiveness: `He-him`
 - :seedling: As you sow _at the right place_, so shall you reap   
 
+![](https://github.com/ranjiGT/ranjiGT/blob/main/shine.svg)
 
 ## 🔥The Data Inside Us and Its Visualization is Energy Dimensions
 
-![](https://github.com/ranjiGT/ranjiGT/blob/main/chakra.png) 
-
-
-![](https://github.com/ranjiGT/ranjiGT/blob/main/shine.svg)
-
+![](https://github.com/ranjiGT/ranjiGT/blob/main/chakra-gif-7.gif) 
 
 
 <!-- BEGIN YOUTUBE-CARDS -->
@@ -28,7 +25,6 @@
 ## 🔥Interpretation about Data
 
 ![](https://github.com/ranjiGT/ranjiGT/blob/main/Roles.png)
-
 
 
 
