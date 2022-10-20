@@ -14,5 +14,8 @@
 ## Some of my Github Stats
 <p align=left> <img src=https://komarev.com/ghpvc/?username=ranjiGT alt=ranjiGT /> </p>
 
+
+[![GitHub Streak](https://streak-stats.demolab.com/?user=ranjiGT)](https://git.io/streak-stats)
+
 [![Ranji's GitHub stats](https://github-readme-stats.vercel.app/api?username=ranjiGT)](https://github.com/ranjiGT/github-readme-stats)
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ranjiGT&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
