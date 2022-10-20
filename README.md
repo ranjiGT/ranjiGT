@@ -9,8 +9,6 @@
 ![](https://github.com/ranjiGT/ranjiGT/blob/main/shine.svg)
 
 
-![image](https://user-images.githubusercontent.com/64376506/196943700-d05d20b6-f478-4c74-a6f5-a1de74b4f1f4.png)
-
 
 <!-- BEGIN YOUTUBE-CARDS -->
 <!-- END YOUTUBE-CARDS -->
