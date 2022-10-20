@@ -6,6 +6,12 @@
 - :busts_in_silhouette: Possessiveness: `He-him`
 - :seedling: As you sow _at the right place_, so shall you reap   
 
+
+## 🔥The Data Inside Us
+
+![](https://github.com/ranjiGT/ranjiGT/blob/main/chakra.png) From the vedic roots, each one of possess 7 different chakras: namely Root Chakra, Sacral Chakra, Solar Plexus Chakra, Heat Chakra, Throat Chakra, Third-eye Chakra and Crown Chakra.
+
+
 ![](https://github.com/ranjiGT/ranjiGT/blob/main/shine.svg)
 
 
@@ -18,9 +24,7 @@
 ![](https://github.com/ranjiGT/ranjiGT/blob/main/Roles.png)
 
 
-## 🔥The Data Inside Us
 
-![](https://github.com/ranjiGT/ranjiGT/blob/main/chakra.png)
 
 ## Some of my Github Stats
 <p align=left> <img src=https://komarev.com/ghpvc/?username=ranjiGT alt=ranjiGT /> </p>
