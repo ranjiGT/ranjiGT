@@ -23,7 +23,7 @@
 
 ## 🔥The Data Inside Us and Its Visualization in Energy Dimensions
 
-<p align=center> ![](https://github.com/ranjiGT/ranjiGT/blob/main/chakra-gif-7.gif) </p>
+![](https://github.com/ranjiGT/ranjiGT/blob/main/chakra-gif-7.gif)
 
 
 ## 🔥Interpretation about Data
