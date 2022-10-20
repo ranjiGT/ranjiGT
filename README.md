@@ -7,9 +7,9 @@
 - :seedling: As you sow _at the right place_, so shall you reap   
 
 
-## 🔥The Data Inside Us
+## 🔥The Data Inside Us and Its Visualization is Energy Dimensions
 
-![](https://github.com/ranjiGT/ranjiGT/blob/main/chakra.png) From the vedic roots, each one of possess 7 different chakras: namely Root Chakra, Sacral Chakra, Solar Plexus Chakra, Heat Chakra, Throat Chakra, Third-eye Chakra and Crown Chakra.
+![](https://github.com/ranjiGT/ranjiGT/blob/main/chakra.png) 
 
 
 ![](https://github.com/ranjiGT/ranjiGT/blob/main/shine.svg)
