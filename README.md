@@ -4,13 +4,11 @@
 
 - :medical_symbol: Area of Interest: `Machine Learning`, `Programming`, `Data Analysis`, `Research`
 - :busts_in_silhouette: Possessiveness: `He-him`
-- :seedling: As you sow _at the right place_, so shall you reap
-
-
-![](https://github.com/ranjiGT/ranjiGT/blob/main/Roles.png)
-   
+- :seedling: As you sow _at the right place_, so shall you reap   
 
 ![](https://github.com/ranjiGT/ranjiGT/blob/main/shine.svg)
+
+![](https://github.com/ranjiGT/ranjiGT/blob/main/Roles.png)
 
 
 ## Some of my Github Stats
