@@ -4,8 +4,7 @@
 - :medical_symbol: Area of Interest: `Machine Learning`, `Programming`, `Data Analysis`, `Research`
 - :busts_in_silhouette: Possessiveness: `He-him`
 - :seedling: As you sow _at the right place_, so shall you reap
-- :shield:  [`Python`](https://www.linkedin.com/in/reng99/detail/assessments/Python/report/)
-- :shield: [`R`](https://www.linkedin.com/in/reng99/detail/assessments/R/report/)
+
    
                                                        स्वावलंबी
 
