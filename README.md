@@ -1,11 +1,11 @@
 <h3 align="center">
-  Welcome to Ranji Raj's profile!
+  Welcome to Ranji Raj's Profile!
   <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28">
 </h3>
 
 
 <p align="center">
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=Data+Analyst+%26+Content+Creator;4%2B+years+experience+as+Data+Analyst!;Master's+in+Data+Science+" alt="Typing SVG" /></a></p>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=Data+Analyst+%26+Content+Creator;4%2B+Years+Experience+as+Data+Analyst;M.Sc.+in+Data+Science+from+Germany" alt="Typing SVG" /></a></p>
 
 <!-- Social icons section -->
 <p align="center">
@@ -29,6 +29,9 @@
     <img alt="total stars" title="Total stars on GitHub" src="https://custom-icon-badges.demolab.com/github/stars/ranjiGT?color=55960c&style=for-the-badge&labelColor=488207&logo=star"/></a>
   <a href="https://github.com/ranjiGT?tab=followers">
     <img alt="followers" title="Follow me on Github" src="https://custom-icon-badges.demolab.com/github/followers/ranjiGT?color=236ad3&labelColor=1155ba&style=for-the-badge&logo=person-add&label=Follow&logoColor=white"/></a>
+    <a href="https://github.com/DenverCoder1/Simple-View-Counter">
+    <img alt="views" title="GitHub profile views" src="https://freshidea.com/jonah/app/DenverCoder1-profile-views"/></a>
+</p>
   
 
 ## 🔥My Recent YouTube Lessons
@@ -57,3 +60,6 @@
 
 [![Ranji's GitHub stats](https://github-readme-stats.vercel.app/api?username=ranjiGT)](https://github.com/ranjiGT/github-readme-stats)
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ranjiGT&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
+
+
+<a href="https://github.com/ashutosh00710/github-readme-activity-graph"><img alt="Ranji Raj's Activity Graph" src="https://denvercoder1-activity-graph.herokuapp.com/graph/?username=ranjiGT&bg_color=1F222E&color=F8D866&line=F85D7F&point=FFFFFF&hide_border=true" /></a>
