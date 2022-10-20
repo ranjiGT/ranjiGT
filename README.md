@@ -8,7 +8,6 @@
 
 ![](https://github.com/ranjiGT/ranjiGT/blob/main/Roles.png)
    
-                                                       स्वावलंबी
 
 ![](https://github.com/ranjiGT/ranjiGT/blob/main/shine.svg)
 
