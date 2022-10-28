@@ -38,12 +38,12 @@
 ## 📺 Recent YouTube Lessons
 
 <!-- BEGIN YOUTUBE-CARDS -->
+[![Data Science with R | Introduction to R programming language](https://ytcards.demolab.com/?id=TA4jKjBNJrk&title=Data+Science+with+R+%7C+Introduction+to+R+programming+language&lang=en&timestamp=1666917184&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250 "Data Science with R | Introduction to R programming language")](https://www.youtube.com/watch?v=TA4jKjBNJrk)
 [![Data Science Interview Series | Part 03](https://ytcards.demolab.com/?id=OmxxZ_wMT6M&title=Data+Science+Interview+Series+%7C+Part+03&lang=en&timestamp=1631873207&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250 "Data Science Interview Series | Part 03")](https://www.youtube.com/watch?v=OmxxZ_wMT6M)
 [![Data Science Interview Questions | Part - 02](https://ytcards.demolab.com/?id=ITIeCvOT21Y&title=Data+Science+Interview+Questions+%7C+Part+-+02&lang=en&timestamp=1631275607&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250 "Data Science Interview Questions | Part - 02")](https://www.youtube.com/watch?v=ITIeCvOT21Y)
 [![QNA with Ranji | General session | Sept 05, 2021 | Teacher's day Special](https://ytcards.demolab.com/?id=vAmA-s6dTWg&title=QNA+with+Ranji+%7C+General+session+%7C+Sept+05%2C+2021+%7C+Teacher%27s+day+Special&lang=en&timestamp=1630885417&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250 "QNA with Ranji | General session | Sept 05, 2021 | Teacher's day Special")](https://www.youtube.com/watch?v=vAmA-s6dTWg)
 [![Data Science Interview series | Part -1](https://ytcards.demolab.com/?id=s9OfWkIcz_Q&title=Data+Science+Interview+series+%7C+Part+-1&lang=en&timestamp=1630772335&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250 "Data Science Interview series | Part -1")](https://www.youtube.com/watch?v=s9OfWkIcz_Q)
 [![Machine Learning | Semi-Supervised SVM (S3VM/TSVM)](https://ytcards.demolab.com/?id=q2bdQw4Su_U&title=Machine+Learning+%7C+Semi-Supervised+SVM+%28S3VM%2FTSVM%29&lang=en&timestamp=1630172183&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250 "Machine Learning | Semi-Supervised SVM (S3VM/TSVM)")](https://www.youtube.com/watch?v=q2bdQw4Su_U)
-[![Machine Learning | Safe Semi-Supervised Learning](https://ytcards.demolab.com/?id=7FfbeSf-0L8&title=Machine+Learning+%7C+Safe+Semi-Supervised+Learning&lang=en&timestamp=1629457399&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250 "Machine Learning | Safe Semi-Supervised Learning")](https://www.youtube.com/watch?v=7FfbeSf-0L8)
 <!-- END YOUTUBE-CARDS -->
 
 
