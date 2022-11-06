@@ -38,12 +38,12 @@
 ## 📺 Recent YouTube Lessons
 
 <!-- BEGIN YOUTUBE-CARDS -->
+[![Nayi Shuruwat 🎉](https://ytcards.demolab.com/?id=8v8krs5Bahw&title=Nayi+Shuruwat+%F0%9F%8E%89&lang=en&timestamp=1667739904&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250 "Nayi Shuruwat 🎉")](https://www.youtube.com/watch?v=8v8krs5Bahw)
 [![New Hindi Channel Announcement | Adhyapakh](https://ytcards.demolab.com/?id=n9xRLWjEvlI&title=New+Hindi+Channel+Announcement+%7C+Adhyapakh&lang=en&timestamp=1667678638&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250 "New Hindi Channel Announcement | Adhyapakh")](https://www.youtube.com/watch?v=n9xRLWjEvlI)
 [![Deep Learning | Teacher Forcing](https://ytcards.demolab.com/?id=vQ9_4tlYXSA&title=Deep+Learning+%7C+Teacher+Forcing&lang=en&timestamp=1667338286&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250 "Deep Learning | Teacher Forcing")](https://www.youtube.com/watch?v=vQ9_4tlYXSA)
 [![Data Science with R | Variables and Vectors](https://ytcards.demolab.com/?id=C81IjRrd6ao&title=Data+Science+with+R+%7C+Variables+and+Vectors&lang=en&timestamp=1667161433&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250 "Data Science with R | Variables and Vectors")](https://www.youtube.com/watch?v=C81IjRrd6ao)
 [![Data Science with R | Introduction to R programming language](https://ytcards.demolab.com/?id=TA4jKjBNJrk&title=Data+Science+with+R+%7C+Introduction+to+R+programming+language&lang=en&timestamp=1666917184&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250 "Data Science with R | Introduction to R programming language")](https://www.youtube.com/watch?v=TA4jKjBNJrk)
 [![Data Science Interview Series | Part 03](https://ytcards.demolab.com/?id=OmxxZ_wMT6M&title=Data+Science+Interview+Series+%7C+Part+03&lang=en&timestamp=1631873207&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250 "Data Science Interview Series | Part 03")](https://www.youtube.com/watch?v=OmxxZ_wMT6M)
-[![Data Science Interview Questions | Part - 02](https://ytcards.demolab.com/?id=ITIeCvOT21Y&title=Data+Science+Interview+Questions+%7C+Part+-+02&lang=en&timestamp=1631275607&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250 "Data Science Interview Questions | Part - 02")](https://www.youtube.com/watch?v=ITIeCvOT21Y)
 <!-- END YOUTUBE-CARDS -->
 
 
