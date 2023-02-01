@@ -5,7 +5,7 @@
 
 
 <p align="center">
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=Data+Analyst+and+Content+Creator;4%2B+Years+Experience+as+Data+Analyst;M.Sc.+in+Data+Science+from+Germany" alt="Typing SVG" /></a></p>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=Data+Lover+and+Content+Creator;4%2B+Years+Experience+as+Automation+Engineer;M.Sc.+in+Data+Science+from+Germany" alt="Typing SVG" /></a></p>
 
 <!-- Social icons section -->
 <p align="center">
