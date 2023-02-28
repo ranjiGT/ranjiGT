@@ -3,6 +3,11 @@
   <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28">
 </h3>
 
+## FAQ
+
+### How to pronounce my name "Ranji"?
+
+`Ran` is pronounced like **RUN**, `ji` is pronounced like English alphabet **G**.
 
 <p align="center">
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=Data+Lover+and+Content+Creator;4%2B+Years+Experience+as+Automation+Er;M.Sc.+in+Data+Science+from+Germany" alt="Typing SVG" /></a></p>
