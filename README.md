@@ -14,11 +14,11 @@
 
 <!-- Social icons section -->
 <p align="center">
-  <a href="https://www.youtube.com/c/RanjiRaj18"><img width="32px" alt="Youtube" title="Youtube" src="https://simpleicons.now.sh/youtube/DB1F48"/></a>
+  <a href="https://www.youtube.com/c/RanjiRaj18"><img width="32px" alt="YouTube" title="YouTube" src="https://img.shields.io/badge/-YouTube-DB1F48?style=flat&logo=youtube&logoColor=white"/></a>
   &#8287;&#8287;&#8287;&#8287;&#8287;
-  <a href="https://www.linkedin.com/in/reng99/"><img width="32px" alt="Youtube" title="Youtube" src="https://simpleicons.now.sh/linkedin/0A66C2"/></a>
+  <a href="https://www.linkedin.com/in/reng99/"><img width="32px" alt="LinkedIn" title="LinkedIn" src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white"/></a>
   &#8287;&#8287;&#8287;&#8287;&#8287;
-  <a href="https://twitter.com/iamRanjiRaj"><img width="32px" alt="Twitter" title="Twitter" src="https://simpleicons.now.sh/twitter/1DA1F2"/></a>
+  <a href="https://twitter.com/iamRanjiRaj"><img width="32px" alt="Twitter" title="Twitter" src="https://img.shields.io/badge/-Twitter-1DA1F2?style=flat&logo=twitter&logoColor=white"/></a>
   &#8287;&#8287;&#8287;&#8287;&#8287;
 </p>
 
@@ -106,7 +106,7 @@
 <details> 
   <summary>💻 GitHub Profile Stats</summary>
   <br/>
-    <a href="https://github.com/anuraghazra/github-readme-stats"><img alt="Ranji Raj's Github Stats" src="https://denvercoder1-github-readme-stats.vercel.app/api/?username=ranjiGT&show_icons=true&include_all_commits=true&count_private=true&theme=react&hide_border=true&bg_color=1F222E&title_color=F85D7F&icon_color=F8D866" height="192px"/></a>
+    <a href="https://github.com/anuraghazra/github-readme-stats"><img alt="Ranji Raj's Github Stats" src="https://github-readme-stats.vercel.app/api/?username=ranjiGT&show_icons=true&include_all_commits=true&count_private=true&theme=react&hide_border=true&bg_color=1F222E&title_color=F85D7F&icon_color=F8D866" height="192px"/></a>
   <a href="https://github.com/anuraghazra/github-readme-stats"><img alt="Ranji Raj's Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ranjiGT&langs_count=8&layout=compact&theme=react&hide_border=true&bg_color=1F222E&title_color=F85D7F&icon_color=F8D866" height="192px"/></a>
   <br/>
   
