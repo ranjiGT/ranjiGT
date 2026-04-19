@@ -109,6 +109,14 @@
 
 ---
 
+## 🌍 Open Source Contributions
+
+| Project | Contribution | Impact |
+|---|---|---|
+| [nteract/testbook](https://github.com/nteract/testbook) | [Bug report: Return value as None from testbook function](https://github.com/nteract/testbook/issues/143) | Found a bug in the `@testbook` decorator that returned `None` instead of the actual value. Led to fix in [PR #145](https://github.com/nteract/testbook/pull/145). |
+
+---
+
 ## 📊 GitHub Stats
 
 <p align="center">
