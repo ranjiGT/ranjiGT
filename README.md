@@ -14,6 +14,8 @@
   <a href="https://www.linkedin.com/in/reng99/"><img height="35" alt="LinkedIn" title="LinkedIn" src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
   &#8287;
   <a href="https://x.com/iamRanjiRaj"><img height="35" alt="X" title="X (Twitter)" src="https://img.shields.io/badge/-X-000000?style=for-the-badge&logo=x&logoColor=white"/></a>
+  &#8287;
+  <a href="https://stackoverflow.com/users/14512983/ranji-raj"><img height="35" alt="Stack Overflow" title="Stack Overflow" src="https://img.shields.io/badge/-Stack%20Overflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white"/></a>
 </p>
 
 ---
@@ -114,6 +116,26 @@
 | Project | Contribution | Impact |
 |---|---|---|
 | [nteract/testbook](https://github.com/nteract/testbook) | [Bug report: Return value as None from testbook function](https://github.com/nteract/testbook/issues/143) | Found a bug in the `@testbook` decorator that returned `None` instead of the actual value. Led to fix in [PR #145](https://github.com/nteract/testbook/pull/145). |
+
+---
+
+## 🏅 Stack Overflow
+
+<p align="center">
+  <a href="https://stackoverflow.com/users/14512983/ranji-raj">
+    <img alt="Stack Overflow profile" src="https://stackoverflow-readme-profile.johannchoworern.repl.co/profile/14512983?theme=dark&website=true&location=true"/>
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://stackoverflow.com/users/14512983/ranji-raj">
+    <img alt="Stack Overflow reputation" src="https://img.shields.io/stackexchange/stackoverflow/r/14512983?style=for-the-badge&logo=stack-overflow&label=Reputation&color=FE7A16"/>
+  </a>
+  <img alt="Silver badges" src="https://img.shields.io/badge/🥈_Silver_Badges-7-C0C0C0?style=for-the-badge"/>
+  <img alt="Bronze badges" src="https://img.shields.io/badge/🥉_Bronze_Badges-20-CD7F32?style=for-the-badge"/>
+</p>
+
+**Notable badges:** `Necromancer` · `Enthusiast` · `Census` · `Critic` · `Curious` · `Peer Pressure`
 
 ---
 
