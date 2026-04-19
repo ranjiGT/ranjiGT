@@ -123,12 +123,6 @@
 
 <p align="center">
   <a href="https://stackoverflow.com/users/14512983/ranji-raj">
-    <img alt="Stack Overflow profile" src="https://stackoverflow-readme-profile.johannchoworern.repl.co/profile/14512983?theme=dark&website=true&location=true"/>
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://stackoverflow.com/users/14512983/ranji-raj">
     <img alt="Stack Overflow reputation" src="https://img.shields.io/stackexchange/stackoverflow/r/14512983?style=for-the-badge&logo=stack-overflow&label=Reputation&color=FE7A16"/>
   </a>
   <img alt="Silver badges" src="https://img.shields.io/badge/🥈_Silver_Badges-7-C0C0C0?style=for-the-badge"/>
