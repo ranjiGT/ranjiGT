@@ -46,12 +46,7 @@
 ## 📺 Recent YouTube Lessons
 
 <!-- BEGIN YOUTUBE-CARDS -->
-[![Create Gantt charts in LaTeX using Overleaf | Tutorial 6](https://ytcards.demolab.com/?id=DN8GxwnnkvY&title=Create+Gantt+charts+in+LaTeX+using+Overleaf+%7C+Tutorial+6&lang=en&timestamp=1690617605&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&max_title_lines=1&width=250&border_radius=5 "Create Gantt charts in LaTeX using Overleaf | Tutorial 6")](https://www.youtube.com/watch?v=DN8GxwnnkvY)
-[![Creating Flow Diagrams and Inserting Images in LaTeX | Tutorial 5](https://ytcards.demolab.com/?id=2-OOWdm7X_0&title=Creating+Flow+Diagrams+and+Inserting+Images+in+LaTeX+%7C+Tutorial+5&lang=en&timestamp=1690025401&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&max_title_lines=1&width=250&border_radius=5 "Creating Flow Diagrams and Inserting Images in LaTeX | Tutorial 5")](https://www.youtube.com/watch?v=2-OOWdm7X_0)
-[![Creating Images on LaTeX using Overleaf | Tutorial 4](https://ytcards.demolab.com/?id=4aT3EwKqmd8&title=Creating+Images+on+LaTeX+using+Overleaf+%7C+Tutorial+4&lang=en&timestamp=1689418803&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&max_title_lines=1&width=250&border_radius=5 "Creating Images on LaTeX using Overleaf | Tutorial 4")](https://www.youtube.com/watch?v=4aT3EwKqmd8)
-[![How to create tables using LaTeX on Overleaf | Tutorial 3](https://ytcards.demolab.com/?id=rN7TDccikHE&title=How+to+create+tables+using+LaTeX+on+Overleaf+%7C+Tutorial+3&lang=en&timestamp=1688805020&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&max_title_lines=1&width=250&border_radius=5 "How to create tables using LaTeX on Overleaf | Tutorial 3")](https://www.youtube.com/watch?v=rN7TDccikHE)
-[![Basic Structure of a LaTeX Document on Overleaf | Tutorial 2](https://ytcards.demolab.com/?id=TlA-OXYikqc&title=Basic+Structure+of+a+LaTeX+Document+on+Overleaf+%7C+Tutorial+2&lang=en&timestamp=1688205622&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&max_title_lines=1&width=250&border_radius=5 "Basic Structure of a LaTeX Document on Overleaf | Tutorial 2")](https://www.youtube.com/watch?v=TlA-OXYikqc)
-[![Introduction to LaTeX on Overleaf | Tutorial 1](https://ytcards.demolab.com/?id=pLjtV0XfRa4&title=Introduction+to+LaTeX+on+Overleaf+%7C+Tutorial+1&lang=en&timestamp=1687610397&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&max_title_lines=1&width=250&border_radius=5 "Introduction to LaTeX on Overleaf | Tutorial 1")](https://www.youtube.com/watch?v=pLjtV0XfRa4)
+
 <!-- END YOUTUBE-CARDS -->
 
 ---
