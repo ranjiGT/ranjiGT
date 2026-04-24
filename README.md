@@ -223,19 +223,7 @@
 
 ---
 
-## 🐍 Contribution Snake
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ranjiGT/ranjiGT/output/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ranjiGT/ranjiGT/output/github-contribution-grid-snake.svg">
-    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/ranjiGT/ranjiGT/output/github-contribution-grid-snake.svg">
-  </picture>
-</p>
-
----
-
-## 😄 Dev Joke of the Day
+##  Dev Joke of the Day
 
 <p align="center">
   <img src="https://readme-jokes.vercel.app/api?theme=react&qColor=%23F85D7F&aColor=%23F8D866&borderColor=%231F222E&bgColor=%231F222E" alt="Jokes Card" />
