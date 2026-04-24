@@ -159,6 +159,29 @@
 
 ---
 
+## 📓 Kaggle
+
+<p align="center">
+  <a href="https://www.kaggle.com/ranjirajnair">
+    <img alt="Kaggle Profile" src="https://img.shields.io/badge/Kaggle-ranjirajnair-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white"/>
+  </a>
+</p>
+
+<p align="center">
+  <img alt="Datasets" src="https://img.shields.io/badge/Datasets-1-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white"/>
+  <img alt="Discussions" src="https://img.shields.io/badge/Discussions-1-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white"/>
+  <img alt="Following" src="https://img.shields.io/badge/Following-2-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white"/>
+</p>
+
+| Tier | Category |
+|---|---|
+| 🥈 Contributor | Competitions |
+| 🥈 Contributor | Datasets |
+| 🥈 Contributor | Notebooks |
+| 🥈 Contributor | Discussion |
+
+---
+
 ## 🏆 GitHub Trophies
 
 <p align="center">
