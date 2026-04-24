@@ -116,6 +116,7 @@
 | Project | Contribution | Impact |
 |---|---|---|
 | [nteract/testbook](https://github.com/nteract/testbook) | [Bug report: Return value as None from testbook function](https://github.com/nteract/testbook/issues/143) | Found a bug in the `@testbook` decorator that returned `None` instead of the actual value. Led to fix in [PR #145](https://github.com/nteract/testbook/pull/145). |
+| [jupyterlab/jupyterlab](https://github.com/jupyterlab/jupyterlab) | [Answered: How to center text in markdown and export it to PDF](https://github.com/jupyterlab/jupyterlab/discussions/16687) | Provided the accepted answer explaining that Pandoc ignores `<center>` HTML tags during PDF (LaTeX) conversion, with the correct raw LaTeX and Pandoc Markdown alternatives. |
 
 ---
 
