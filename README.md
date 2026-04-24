@@ -1,10 +1,7 @@
-<h1 align="center">
-  Hey there! I'm Ranji Raj
-  <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28">
-</h1>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Ranji%20Raj&fontSize=62&fontColor=fff&animation=twinkling&fontAlignY=32&desc=Data%20Scientist%20%7C%20YouTuber%20%7C%20Open%20Source%20Enthusiast&descAlignY=55&descSize=18" width="100%"/>
 
 <p align="center">
-  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&center=true&vCenter=true&width=500&lines=Data+Lover+and+Content+Creator;6%2B+Years+in+Automation+Engineering;M.Sc.+in+Data+Science+from+Germany;YouTuber+%7C+57K%2B+Subscribers" alt="Typing SVG" /></a>
+  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&center=true&vCenter=true&width=600&lines=Data+Lover+%26+Content+Creator+%F0%9F%93%8A;6%2B+Years+in+Automation+Engineering+%F0%9F%A4%96;M.Sc.+in+Data+Science+from+Germany+%F0%9F%8E%93;YouTuber+%7C+57K%2B+Subscribers+%F0%9F%8E%AC;Deep+Learning+%7C+ML+%7C+Python+%7C+R;Building+the+next+generation+of+data+scientists" alt="Typing SVG" /></a>
 </p>
 
 <!-- Social icons section -->
@@ -16,16 +13,23 @@
   <a href="https://x.com/iamRanjiRaj"><img height="35" alt="X" title="X (Twitter)" src="https://img.shields.io/badge/-X-000000?style=for-the-badge&logo=x&logoColor=white"/></a>
   &#8287;
   <a href="https://stackoverflow.com/users/14512983/ranji-raj"><img height="35" alt="Stack Overflow" title="Stack Overflow" src="https://img.shields.io/badge/-Stack%20Overflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white"/></a>
+  &#8287;
+  <a href="https://www.kaggle.com/ranjiraj"><img height="35" alt="Kaggle" title="Kaggle" src="https://img.shields.io/badge/-Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white"/></a>
 </p>
 
 ---
 
 ### 🙋‍♂️ About Me
 
-- **`Ran`** is pronounced like **RUN**, **`ji`** is pronounced like English alphabet **G**
+> **`Ran`** is pronounced like **RUN**, **`ji`** is pronounced like English alphabet **G**
+
 - 🎓 M.Sc. in Data Science from Germany
 - 🤖 6+ years of experience in Automation Engineering
 - 🎬 Passionate about teaching Data Science & Deep Learning on YouTube
+- 🔭 Currently building educational content on Neural Networks & LLMs
+- 🌱 Always exploring the intersection of MLOps and applied AI
+- 💬 Ask me about **Python**, **Deep Learning**, **ML pipelines**, or **Data Viz**
+- ⚡ Fun fact: I can explain backpropagation to a 10-year-old
 
 <!-- Social badges section -->
 <p align="center">
@@ -72,15 +76,33 @@
 </p>
 </details>
 
-<details>
-<summary><b>🧰 Frameworks & Libraries</b></summary>
+<details open>
+<summary><b>🧠 Machine Learning & Data Science</b></summary>
 <br>
 <p>
+    <a href="#"><img alt="TensorFlow" src="https://img.shields.io/badge/TensorFlow-FF6F00.svg?style=flat-square&logo=tensorflow&logoColor=white"></a>
+    <a href="#"><img alt="Keras" src="https://img.shields.io/badge/Keras-D00000.svg?style=flat-square&logo=keras&logoColor=white"></a>
+    <a href="#"><img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-EE4C2C.svg?style=flat-square&logo=pytorch&logoColor=white"></a>
+    <a href="#"><img alt="scikit-learn" src="https://img.shields.io/badge/scikit--learn-F7931E.svg?style=flat-square&logo=scikit-learn&logoColor=white"></a>
     <a href="#"><img alt="NumPy" src="https://img.shields.io/badge/NumPy-013243.svg?style=flat-square&logo=numpy&logoColor=white"></a>
     <a href="#"><img alt="Pandas" src="https://img.shields.io/badge/Pandas-150458.svg?style=flat-square&logo=pandas&logoColor=white"></a>
+    <a href="#"><img alt="Matplotlib" src="https://img.shields.io/badge/Matplotlib-11557C.svg?style=flat-square&logo=python&logoColor=white"></a>
+    <a href="#"><img alt="Seaborn" src="https://img.shields.io/badge/Seaborn-4EABE8.svg?style=flat-square&logo=python&logoColor=white"></a>
+    <a href="#"><img alt="Plotly" src="https://img.shields.io/badge/Plotly-3F4F75.svg?style=flat-square&logo=plotly&logoColor=white"></a>
+    <a href="#"><img alt="Streamlit" src="https://img.shields.io/badge/Streamlit-FF4B4B.svg?style=flat-square&logo=streamlit&logoColor=white"></a>
+    <a href="#"><img alt="Hugging Face" src="https://img.shields.io/badge/🤗%20Hugging%20Face-FFD21E.svg?style=flat-square&logoColor=black"></a>
+</p>
+</details>
+
+<details>
+<summary><b>🧰 Frameworks & Dev Tools</b></summary>
+<br>
+<p>
     <a href="#"><img alt="Flask" src="https://img.shields.io/badge/Flask-000000.svg?style=flat-square&logo=flask&logoColor=white"></a>
+    <a href="#"><img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-009688.svg?style=flat-square&logo=fastapi&logoColor=white"></a>
     <a href="#"><img alt="Gunicorn" src="https://img.shields.io/badge/Gunicorn-499848.svg?style=flat-square&logo=gunicorn&logoColor=white"></a>
     <a href="#"><img alt="Node.js" src="https://img.shields.io/badge/Node.js-43853D.svg?style=flat-square&logo=node.js&logoColor=white"></a>
+    <a href="#"><img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED.svg?style=flat-square&logo=docker&logoColor=white"></a>
     <a href="#"><img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub%20Actions-2671E5.svg?style=flat-square&logo=github%20actions&logoColor=white"></a>
 </p>
 </details>
@@ -94,6 +116,7 @@
     <a href="#"><img alt="MongoDB" src="https://img.shields.io/badge/MongoDB-4ea94b.svg?style=flat-square&logo=mongodb&logoColor=white"></a>
     <a href="#"><img alt="GitHub Pages" src="https://img.shields.io/badge/GitHub%20Pages-327FC7.svg?style=flat-square&logo=github&logoColor=white"></a>
     <a href="#"><img alt="Heroku" src="https://img.shields.io/badge/Heroku-430098.svg?style=flat-square&logo=heroku&logoColor=white"></a>
+    <a href="#"><img alt="Google Colab" src="https://img.shields.io/badge/Google%20Colab-F9AB00.svg?style=flat-square&logo=googlecolab&logoColor=white"></a>
 </p>
 </details>
 
@@ -106,6 +129,8 @@
     <a href="#"><img alt="Git" src="https://img.shields.io/badge/Git-F05033.svg?style=flat-square&logo=git&logoColor=white"></a>
     <a href="#"><img alt="GitHub Desktop" src="https://img.shields.io/badge/GitHub%20Desktop-8034A9.svg?style=flat-square&logo=github&logoColor=white"></a>
     <a href="#"><img alt="Stack Overflow" src="https://img.shields.io/badge/Stack%20Overflow-FE7A16.svg?style=flat-square&logo=stack-overflow&logoColor=white"></a>
+    <a href="#"><img alt="Anaconda" src="https://img.shields.io/badge/Anaconda-44A833.svg?style=flat-square&logo=anaconda&logoColor=white"></a>
+    <a href="#"><img alt="Tableau" src="https://img.shields.io/badge/Tableau-E97627.svg?style=flat-square&logo=tableau&logoColor=white"></a>
 </p>
 </details>
 
@@ -134,6 +159,14 @@
 
 ---
 
+## 🏆 GitHub Trophies
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=ranjiGT&theme=radical&no-frame=true&no-bg=true&margin-w=4&row=1" alt="GitHub Trophies"/>
+</p>
+
+---
+
 ## 📊 GitHub Stats
 
 <p align="center">
@@ -158,3 +191,25 @@
     <img alt="Ranji Raj's Activity Graph" src="https://github-readme-activity-graph.vercel.app/graph/?username=ranjiGT&bg_color=1F222E&color=F8D866&line=F85D7F&point=FFFFFF&hide_border=true"/>
   </a>
 </p>
+
+---
+
+## 🐍 Contribution Snake
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ranjiGT/ranjiGT/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ranjiGT/ranjiGT/output/github-contribution-grid-snake.svg">
+    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/ranjiGT/ranjiGT/output/github-contribution-grid-snake.svg">
+  </picture>
+</p>
+
+---
+
+## 😄 Dev Joke of the Day
+
+<p align="center">
+  <img src="https://readme-jokes.vercel.app/api?theme=react&qColor=%23F85D7F&aColor=%23F8D866&borderColor=%231F222E&bgColor=%231F222E" alt="Jokes Card" />
+</p>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" width="100%"/>
