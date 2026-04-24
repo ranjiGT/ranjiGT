@@ -180,6 +180,20 @@
 | 🥈 Contributor | Notebooks |
 | 🥈 Contributor | Discussion |
 
+**Badges earned:**
+
+<p align="center">
+  <img alt="5 Years on Kaggle" title="5 Years on Kaggle" src="https://img.shields.io/badge/🏅_5_Years_on_Kaggle-active-20BEFF?style=flat-square"/>
+  <img alt="Kaggle Community Member" title="Joined Kaggle" src="https://img.shields.io/badge/🤝_Community_Member-joined-20BEFF?style=flat-square"/>
+  <img alt="Competitor" title="Made a competition submission" src="https://img.shields.io/badge/🏆_Competitor-competition-20BEFF?style=flat-square"/>
+  <img alt="Getting Started Competitor" title="Submitted to a Getting Started competition" src="https://img.shields.io/badge/🚀_Getting_Started_Competitor-competition-20BEFF?style=flat-square"/>
+  <img alt="Python Coder" title="Created a Python notebook" src="https://img.shields.io/badge/🐍_Python_Coder-notebooks-20BEFF?style=flat-square"/>
+  <img alt="R Coder" title="Created an R notebook" src="https://img.shields.io/badge/📊_R_Coder-notebooks-20BEFF?style=flat-square"/>
+  <img alt="Dataset Creator" title="Created a dataset" src="https://img.shields.io/badge/🗂️_Dataset_Creator-datasets-20BEFF?style=flat-square"/>
+  <img alt="Learner" title="Completed a Kaggle Learn course" src="https://img.shields.io/badge/💡_Learner-courses-20BEFF?style=flat-square"/>
+  <img alt="Student" title="Completed 5 Kaggle Learn courses" src="https://img.shields.io/badge/🎓_Student-courses-20BEFF?style=flat-square"/>
+</p>
+
 ---
 
 ## 📊 GitHub Stats
