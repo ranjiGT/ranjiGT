@@ -1,7 +1,7 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Ranji%20Raj&fontSize=62&fontColor=fff&animation=twinkling&fontAlignY=32&desc=Data%20Scientist%20%7C%20YouTuber%20%7C%20Open%20Source%20Enthusiast&descAlignY=55&descSize=18" width="100%"/>
 
 <p align="center">
-  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&center=true&vCenter=true&width=600&lines=Data+Lover+%26+Content+Creator+%F0%9F%93%8A;6%2B+Years+in+Automation+Engineering+%F0%9F%A4%96;M.Sc.+in+Data+Science+from+Germany+%F0%9F%8E%93;YouTuber+%7C+57K%2B+Subscribers+%F0%9F%8E%AC;Deep+Learning+%7C+ML+%7C+Python+%7C+R;Building+the+next+generation+of+data+scientists" alt="Typing SVG" /></a>
+  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&center=true&vCenter=true&width=750&lines=Data+Lover+%26+Content+Creator+%F0%9F%93%8A;6%2B+Years+in+Automation+Engineering+%F0%9F%A4%96;M.Sc.+in+Data+Science+from+Germany+%F0%9F%8E%93;YouTuber+%7C+57K%2B+Subscribers+%F0%9F%8E%AC;Deep+Learning+%7C+ML+%7C+Python+%7C+R;Building+the+next+generation+of+data+scientists" alt="Typing SVG" /></a>
 </p>
 
 <!-- Social icons section -->
