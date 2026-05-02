@@ -200,7 +200,7 @@
 
 <p align="center">
   <a href="https://github.com/anuraghazra/github-readme-stats">
-    <img alt="Ranji Raj's Github Stats" src="https://github-readme-stats.vercel.app/api/?username=ranjiGT&show_icons=true&include_all_commits=true&count_private=true&theme=react&hide_border=true&bg_color=1F222E&title_color=F85D7F&icon_color=F8D866" height="192px"/>
+    <img alt="Ranji Raj's Github Stats" src="https://github-readme-stats.vercel.app/api/?username=ranjiGT&show_icons=true&include_all_commits=true&theme=react&hide_border=true&bg_color=1F222E&title_color=F85D7F&icon_color=F8D866" height="192px"/>
   </a>
   <a href="https://github.com/anuraghazra/github-readme-stats">
     <img alt="Ranji Raj's Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ranjiGT&langs_count=8&layout=compact&theme=react&hide_border=true&bg_color=1F222E&title_color=F85D7F&icon_color=F8D866" height="192px"/>
@@ -219,6 +219,16 @@
   <a href="https://github.com/ashutosh00710/github-readme-activity-graph">
     <img alt="Ranji Raj's Activity Graph" src="https://github-readme-activity-graph.vercel.app/graph/?username=ranjiGT&bg_color=1F222E&color=F8D866&line=F85D7F&point=FFFFFF&hide_border=true"/>
   </a>
+</p>
+
+## 🐍 Contribution Snake
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ranjiGT/ranjiGT/output/github-contribution-grid-snake-dark.svg"/>
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ranjiGT/ranjiGT/output/github-contribution-grid-snake.svg"/>
+    <img alt="GitHub contribution snake animation" src="https://raw.githubusercontent.com/ranjiGT/ranjiGT/output/github-contribution-grid-snake.svg"/>
+  </picture>
 </p>
 
 ---
