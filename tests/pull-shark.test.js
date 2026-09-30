@@ -5,10 +5,16 @@ import {
   getPullSharkProgress,
   summarizePullRequests
 } from '../src/pull-shark.js';
-import { getVerifiedAchievements, githubAchievementCatalog } from '../src/achievements.js';
+import {
+  getAchievementActivityProgress,
+  getVerifiedAchievements,
+  getVerifiedActivityMinimums,
+  githubAchievementCatalog,
+  tieredAchievementTargets
+} from '../src/achievements.js';
 
 test('lists current and retired GitHub achievement types', () => {
-  assert.equal(githubAchievementCatalog.filter(({ availability }) => availability === 'available').length, 7);
+  assert.equal(githubAchievementCatalog.filter(({ availability }) => availability === 'available').length, 8);
   assert.equal(githubAchievementCatalog.filter(({ availability }) => availability === 'retired').length, 2);
 });
 
@@ -21,6 +27,26 @@ test('returns only publicly verified achievements for ranjiGT', () => {
     level: 4
   });
   assert.equal(getVerifiedAchievements('octocat'), null);
+  assert.deepEqual(getVerifiedActivityMinimums('ranjiGT'), {
+    pairExtraordinaire: 48,
+    galaxyBrain: 32
+  });
+  assert.equal(getVerifiedActivityMinimums('octocat'), null);
+});
+
+test('calculates remaining Pair Extraordinaire and Galaxy Brain activity', () => {
+  assert.deepEqual(getAchievementActivityProgress(4, tieredAchievementTargets['Pair Extraordinaire']), {
+    level: 1,
+    nextTarget: 10,
+    remaining: 6,
+    progressPercent: 33
+  });
+  assert.deepEqual(getAchievementActivityProgress(8, tieredAchievementTargets['Galaxy Brain']), {
+    level: 2,
+    nextTarget: 16,
+    remaining: 8,
+    progressPercent: 0
+  });
 });
 
 test('summarizes merged pull requests by year and repository', () => {
