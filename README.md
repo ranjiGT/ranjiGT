@@ -218,6 +218,8 @@ Achievements currently visible on the [ranjiGT GitHub profile](https://github.co
 
 The analyzer looks up a username once, then shows progress for every current achievement. Pull Shark merged PRs are fetched automatically; enter activity counts manually for other badges. GitHub does not expose most achievement counters or badge inventory through its public API, and level thresholds are community-reported estimates.
 
+The Achievement activity breakdown summarizes each current badge, its qualifying activity, current count, level, and remaining activity to the next level. The table updates when you edit a badge's activity count or run the username lookup.
+
 GitHub does not provide a public API for achievement inventory. The badges above are verified from this profile; the tool does not claim to know another user's earned badges.
 
 ## 📊 GitHub Stats
