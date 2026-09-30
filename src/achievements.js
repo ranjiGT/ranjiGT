@@ -117,3 +117,28 @@ export function getAchievementActivityProgress(activityCount, targets) {
       : Math.round(((count - previousTarget) / (nextTarget - previousTarget)) * 100)
   };
 }
+
+export function getAchievementBreakdown(activityCounts, pullRequestCount = null) {
+  return githubAchievementCatalog
+    .filter((achievement) => achievement.availability === 'available')
+    .map(({ name }) => {
+      const definition = achievementProgressDefinitions[name];
+      const count = definition.source === 'github'
+        ? pullRequestCount
+        : Number(activityCounts[name]) || 0;
+
+      if (count === null) {
+        return { name, metric: definition.metric, count: null, level: null, nextLevel: null, remaining: null };
+      }
+
+      const progress = getAchievementActivityProgress(count, definition.targets);
+      return {
+        name,
+        metric: definition.metric,
+        count,
+        level: progress.level,
+        nextLevel: progress.nextTarget === null ? null : progress.level + 1,
+        remaining: progress.remaining
+      };
+    });
+}

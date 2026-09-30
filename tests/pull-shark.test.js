@@ -8,6 +8,7 @@ import {
 import {
   achievementProgressDefinitions,
   getAchievementActivityProgress,
+  getAchievementBreakdown,
   getInitialActivityCounts,
   getVerifiedAchievements,
   getVerifiedActivityMinimums,
@@ -54,6 +55,24 @@ test('calculates remaining Pair Extraordinaire and Galaxy Brain activity', () =>
     nextTarget: 16,
     remaining: 8,
     progressPercent: 0
+  });
+});
+
+test('builds one activity breakdown row for each current achievement', () => {
+  const counts = getInitialActivityCounts('octocat');
+  const beforeLookup = getAchievementBreakdown(counts);
+  const afterLookup = getAchievementBreakdown(counts, 130);
+
+  assert.equal(beforeLookup.length, 8);
+  assert.equal(beforeLookup.find(({ name }) => name === 'Pair Extraordinaire').remaining, 1);
+  assert.equal(beforeLookup.find(({ name }) => name === 'Pull Shark').count, null);
+  assert.deepEqual(afterLookup.find(({ name }) => name === 'Pull Shark'), {
+    name: 'Pull Shark',
+    metric: 'Merged pull requests',
+    count: 130,
+    level: 3,
+    nextLevel: 4,
+    remaining: 894
   });
 });
 

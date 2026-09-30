@@ -149,6 +149,32 @@
         overflow-wrap: anywhere;
       }
 
+      .achievement-breakdown-wrap {
+        margin-top: 1.5rem;
+        overflow-x: auto;
+      }
+
+      .achievement-breakdown-table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+      }
+
+      .achievement-breakdown-table th,
+      .achievement-breakdown-table td {
+        padding: 0.7rem;
+        border-bottom: 1px solid #334155;
+        vertical-align: top;
+      }
+
+      .achievement-breakdown-table th {
+        color: #cbd5e1;
+      }
+
+      .achievement-breakdown-table td:first-child {
+        font-weight: 700;
+      }
+
       .note {
         color: #94a3b8;
         font-size: 0.9rem;
@@ -237,6 +263,22 @@
         <h2 id="achievements-heading">Achievement catalog</h2>
         <p id="achievement-status" class="status" role="status" aria-live="polite"></p>
         <div id="achievement-list" class="achievement-grid"></div>
+        <div class="achievement-breakdown-wrap">
+          <h3>Achievement activity breakdown</h3>
+          <table class="achievement-breakdown-table">
+            <thead>
+              <tr>
+                <th scope="col">Achievement</th>
+                <th scope="col">Qualifying activity</th>
+                <th scope="col">Count</th>
+                <th scope="col">Level</th>
+                <th scope="col">Next level</th>
+                <th scope="col">Remaining</th>
+              </tr>
+            </thead>
+            <tbody id="achievement-breakdown"></tbody>
+          </table>
+        </div>
         <p class="note">Pull Shark activity is fetched from GitHub. Enter activity counts manually for other badges; GitHub does not expose a public API for badge inventory or most badge counters. Other profiles link to their official achievements page for verification.</p>
       </section>
 
@@ -252,6 +294,7 @@
       import {
         achievementProgressDefinitions,
         getAchievementActivityProgress,
+        getAchievementBreakdown,
         getInitialActivityCounts,
         getVerifiedAchievements,
         githubAchievementCatalog,
@@ -267,6 +310,7 @@
       const submit = document.getElementById('profile-submit');
       const achievementStatus = document.getElementById('achievement-status');
       const achievementList = document.getElementById('achievement-list');
+      const achievementBreakdown = document.getElementById('achievement-breakdown');
       let activeUsername = usernameInput.value.trim();
       let activityCounts = getInitialActivityCounts(activeUsername);
       let mergedPullRequestCount = null;
@@ -323,6 +367,7 @@
             input.addEventListener('input', () => {
               activityCounts[achievement.name] = Number(input.value) || 0;
               updateAchievementProgress(card, achievement.name, activityCounts[achievement.name]);
+              renderAchievementBreakdown();
             });
             label.append(input);
             card.append(label);
@@ -366,7 +411,36 @@
         progressBar.setAttribute('aria-label', `${achievementName}: ${progress.remaining} more activities to next level`);
       }
 
+      function renderAchievementBreakdown() {
+        const rows = getAchievementBreakdown(activityCounts, mergedPullRequestCount).map((item) => {
+          const row = document.createElement('tr');
+          const values = [
+            item.name,
+            item.metric,
+            item.count === null ? 'Run username lookup' : item.count.toLocaleString(),
+            item.level === null ? '—' : item.level,
+            item.nextLevel === null ? '—' : item.nextLevel,
+            item.remaining === null
+              ? '—'
+              : item.nextLevel === null
+                ? 'Highest listed level'
+                : item.remaining.toLocaleString()
+          ];
+
+          for (const value of values) {
+            const cell = document.createElement('td');
+            cell.textContent = value;
+            row.append(cell);
+          }
+
+          return row;
+        });
+
+        achievementBreakdown.replaceChildren(...rows);
+      }
+
       renderAchievements(activeUsername);
+      renderAchievementBreakdown();
 
       function createBreakdown(title, entries, labelForEntry) {
         const section = document.createElement('section');
@@ -456,11 +530,13 @@
         results.replaceChildren();
         mergedPullRequestCount = null;
         renderAchievements(username);
+        renderAchievementBreakdown();
 
         try {
           const report = await fetchMergedPullRequests(username);
           mergedPullRequestCount = report.totalCount;
           renderAchievements(username);
+          renderAchievementBreakdown();
           renderResults(username, report);
           profileStatus.textContent = `Achievement progress for @${username}.`;
         } catch (error) {
