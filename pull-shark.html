@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explore merged GitHub pull requests by year and repository, with estimated Pull Shark milestone progress." />
+    <title>Pull Shark PR Analyzer</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family: Inter, system-ui, sans-serif;
+        background: #0f172a;
+        color: #e2e8f0;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      main {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 2rem 1rem 3rem;
+      }
+
+      a {
+        color: #7dd3fc;
+      }
+
+      .tool-header {
+        border-bottom: 1px solid #334155;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+      }
+
+      .tool-header h1 {
+        margin: 0 0 0.5rem;
+        font-size: 1.8rem;
+      }
+
+      .tool-header p {
+        margin: 0;
+        color: #cbd5e1;
+      }
+
+      .panel {
+        border: 1px solid #334155;
+        border-radius: 8px;
+        padding: 1.25rem;
+        background: #111827;
+      }
+
+      form {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: end;
+        gap: 0.8rem;
+        margin-top: 1rem;
+      }
+
+      label {
+        display: grid;
+        gap: 0.4rem;
+        color: #cbd5e1;
+      }
+
+      input,
+      button {
+        min-height: 2.8rem;
+        box-sizing: border-box;
+        border-radius: 6px;
+        font: inherit;
+      }
+
+      input {
+        width: 100%;
+        padding: 0.7rem;
+        border: 1px solid #475569;
+        background: #0f172a;
+        color: #f8fafc;
+      }
+
+      button {
+        padding: 0.7rem 1rem;
+        border: 0;
+        background: #f59e0b;
+        color: #111827;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      button:disabled {
+        cursor: wait;
+        opacity: 0.65;
+      }
+
+      .status {
+        min-height: 1.5rem;
+        color: #fbbf24;
+      }
+
+      .summary,
+      .breakdowns {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .breakdowns {
+        margin-top: 1.25rem;
+      }
+
+      .stat {
+        min-width: 0;
+        padding: 1rem;
+        border: 1px solid #334155;
+        border-radius: 6px;
+      }
+
+      .stat strong {
+        display: block;
+        color: #f8fafc;
+        font-size: 1.5rem;
+      }
+
+      progress {
+        width: 100%;
+        height: 0.7rem;
+        accent-color: #f59e0b;
+      }
+
+      .breakdown h2 {
+        margin: 0 0 0.6rem;
+        font-size: 1rem;
+      }
+
+      .breakdown ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .breakdown li {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 0.55rem 0;
+        border-bottom: 1px solid #334155;
+        overflow-wrap: anywhere;
+      }
+
+      .note {
+        color: #94a3b8;
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 600px) {
+        form,
+        .summary,
+        .breakdowns {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header class="tool-header">
+        <p><a href="index.html">GitHub Achievement Tracker</a></p>
+        <h1>Pull Shark PR Analyzer</h1>
+        <p>Review merged pull request activity by year and repository.</p>
+      </header>
+
+      <section class="panel" aria-labelledby="lookup-heading">
+        <h2 id="lookup-heading">GitHub account</h2>
+        <form id="pull-shark-form">
+          <label for="github-username">
+            Username
+            <input id="github-username" name="username" value="ranjiGT" autocomplete="username" required />
+          </label>
+          <button id="pull-shark-submit" type="submit">Analyze merged PRs</button>
+        </form>
+        <p id="pull-shark-status" class="status" role="status" aria-live="polite"></p>
+        <div id="pull-shark-results"></div>
+        <p class="note">Milestone thresholds (2, 16, 128, and 1,024) are commonly reported estimates, not an official GitHub guarantee. GitHub Search exposes at most 1,000 matching PRs for breakdowns.</p>
+      </section>
+    </main>
+
+    <script type="module">
+      import { fetchMergedPullRequests, getPullSharkProgress } from './src/pull-shark.js';
+
+      const form = document.getElementById('pull-shark-form');
+      const usernameInput = document.getElementById('github-username');
+      const status = document.getElementById('pull-shark-status');
+      const results = document.getElementById('pull-shark-results');
+      const submit = document.getElementById('pull-shark-submit');
+
+      function createBreakdown(title, entries, labelForEntry) {
+        const section = document.createElement('section');
+        const heading = document.createElement('h2');
+        const list = document.createElement('ul');
+        section.className = 'breakdown';
+        heading.textContent = title;
+        section.append(heading, list);
+
+        if (!entries.length) {
+          const empty = document.createElement('li');
+          empty.textContent = 'No data found.';
+          list.append(empty);
+          return section;
+        }
+
+        for (const entry of entries) {
+          const row = document.createElement('li');
+          const label = document.createElement('span');
+          const count = document.createElement('strong');
+          label.textContent = labelForEntry(entry);
+          count.textContent = entry.count.toLocaleString();
+          row.append(label, count);
+          list.append(row);
+        }
+
+        return section;
+      }
+
+      function renderResults(username, report) {
+        const progress = getPullSharkProgress(report.totalCount);
+        const summary = document.createElement('div');
+        const totalCard = document.createElement('div');
+        const milestoneCard = document.createElement('div');
+        const total = document.createElement('strong');
+        const milestone = document.createElement('strong');
+        const progressText = document.createElement('p');
+        const progressBar = document.createElement('progress');
+        const breakdowns = document.createElement('div');
+
+        summary.className = 'summary';
+        totalCard.className = 'stat';
+        milestoneCard.className = 'stat';
+        total.textContent = report.totalCount.toLocaleString();
+        milestone.textContent = progress.currentMilestone
+          ? `Level ${[2, 16, 128, 1024].indexOf(progress.currentMilestone) + 1}`
+          : 'Not unlocked';
+        totalCard.append(total, document.createTextNode(' merged pull requests'));
+        progressText.textContent = progress.nextMilestone
+          ? `${(progress.nextMilestone - report.totalCount).toLocaleString()} more to the next reported milestone (${progress.nextMilestone.toLocaleString()}).`
+          : 'You have passed the highest commonly reported milestone.';
+        progressBar.max = 100;
+        progressBar.value = progress.progressPercent;
+        progressBar.setAttribute('aria-label', 'Progress to next reported Pull Shark milestone');
+        milestoneCard.append(milestone, progressText, progressBar);
+        summary.append(totalCard, milestoneCard);
+
+        breakdowns.className = 'breakdowns';
+        breakdowns.append(
+          createBreakdown('By year', report.byYear, (entry) => entry.year),
+          createBreakdown('Top repositories', report.byRepository.slice(0, 10), (entry) => entry.repository)
+        );
+        results.replaceChildren(summary, breakdowns);
+        status.textContent = `Results for @${username}.`;
+
+        if (report.truncated) {
+          status.textContent += ' The breakdown is limited to the first 1,000 search results.';
+        }
+      }
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const username = usernameInput.value.trim();
+        if (!/^[A-Za-z0-9](?:[A-Za-z0-9-]{0,37}[A-Za-z0-9])?$/.test(username)) {
+          status.textContent = 'Enter a valid GitHub username.';
+          return;
+        }
+
+        submit.disabled = true;
+        status.textContent = 'Searching GitHub for merged pull requests...';
+        results.replaceChildren();
+
+        try {
+          renderResults(username, await fetchMergedPullRequests(username));
+        } catch (error) {
+          status.textContent = error.message;
+        } finally {
+          submit.disabled = false;
+        }
+      });
+    </script>
+  </body>
+</html>

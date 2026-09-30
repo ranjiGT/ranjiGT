@@ -196,6 +196,12 @@
 
 ---
 
+## Pull Shark PR Analyzer
+
+Analyze merged pull request totals, yearly activity, repository breakdowns, and estimated badge progress with the standalone [Pull Shark PR Analyzer](pull-shark.html).
+
+Run it locally with `python3 -m http.server 8000`, then open `http://localhost:8000/pull-shark.html`.
+
 ## 📊 GitHub Stats
 
 <p align="center">

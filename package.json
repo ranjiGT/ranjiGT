@@ -1,0 +1,8 @@
+{
+  "name": "pull-shark-pr-analyzer",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  }
+}
