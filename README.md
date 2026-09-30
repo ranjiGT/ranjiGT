@@ -204,6 +204,22 @@ Analyze merged pull request totals, yearly activity, repository breakdowns, and 
 
 Run it locally with `python3 -m http.server 8000`, then open `http://localhost:8000/pull-shark.html`.
 
+### GitHub Achievements
+
+Achievements currently visible on the [ranjiGT GitHub profile](https://github.com/ranjiGT?tab=achievements):
+
+<p>
+  <a href="https://github.com/ranjiGT?tab=achievements"><img alt="Pair Extraordinaire level 4" src="https://img.shields.io/badge/Pair_Extraordinaire-Level_4-2ea44f?style=flat-square"/></a>
+  <a href="https://github.com/ranjiGT?tab=achievements"><img alt="Galaxy Brain level 4" src="https://img.shields.io/badge/Galaxy_Brain-Level_4-2ea44f?style=flat-square"/></a>
+  <a href="https://github.com/ranjiGT?tab=achievements"><img alt="Public Sponsor" src="https://img.shields.io/badge/Public_Sponsor-Earned-2ea44f?style=flat-square"/></a>
+  <a href="https://github.com/ranjiGT?tab=achievements"><img alt="Quickdraw" src="https://img.shields.io/badge/Quickdraw-Earned-2ea44f?style=flat-square"/></a>
+  <a href="https://github.com/ranjiGT?tab=achievements"><img alt="Pull Shark level 3" src="https://img.shields.io/badge/Pull_Shark-Level_3-2ea44f?style=flat-square"/></a>
+  <a href="https://github.com/ranjiGT?tab=achievements"><img alt="YOLO" src="https://img.shields.io/badge/YOLO-Earned-2ea44f?style=flat-square"/></a>
+  <a href="https://github.com/ranjiGT?tab=achievements"><img alt="Starstruck" src="https://img.shields.io/badge/Starstruck-Earned-2ea44f?style=flat-square"/></a>
+</p>
+
+GitHub does not provide a public API for achievement inventory. The analyzer shows verified achievements for this profile and lists retired achievement types separately.
+
 ## 📊 GitHub Stats
 
 <p align="center">

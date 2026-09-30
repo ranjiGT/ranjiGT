@@ -5,6 +5,23 @@ import {
   getPullSharkProgress,
   summarizePullRequests
 } from '../src/pull-shark.js';
+import { getVerifiedAchievements, githubAchievementCatalog } from '../src/achievements.js';
+
+test('lists current and retired GitHub achievement types', () => {
+  assert.equal(githubAchievementCatalog.filter(({ availability }) => availability === 'available').length, 7);
+  assert.equal(githubAchievementCatalog.filter(({ availability }) => availability === 'retired').length, 2);
+});
+
+test('returns only publicly verified achievements for ranjiGT', () => {
+  const achievements = getVerifiedAchievements('ranjiGT');
+
+  assert.equal(achievements.length, 7);
+  assert.deepEqual(achievements.find(({ name }) => name === 'Pair Extraordinaire'), {
+    name: 'Pair Extraordinaire',
+    level: 4
+  });
+  assert.equal(getVerifiedAchievements('octocat'), null);
+});
 
 test('summarizes merged pull requests by year and repository', () => {
   const report = summarizePullRequests([
