@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Explore merged GitHub pull requests by year and repository, with estimated Pull Shark milestone progress." />
-    <title>Pull Shark PR Analyzer</title>
+    <meta name="description" content="Browse GitHub achievement types and analyze merged pull requests by year and repository." />
+    <title>GitHub Achievements and Pull Shark Analyzer</title>
     <style>
       :root {
         color-scheme: dark;
@@ -154,10 +154,75 @@
         font-size: 0.9rem;
       }
 
+      .achievement-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.65rem;
+      }
+
+      .achievement {
+        min-width: 0;
+        padding: 0.8rem;
+        border: 1px solid #334155;
+        border-radius: 6px;
+        background: #0f172a;
+      }
+
+      .achievement strong {
+        display: block;
+        overflow-wrap: anywhere;
+      }
+
+      .achievement span {
+        display: block;
+        margin-top: 0.35rem;
+        color: #94a3b8;
+        font-size: 0.85rem;
+      }
+
+      .achievement.earned {
+        border-color: #22c55e;
+      }
+
+      .achievement.earned span {
+        color: #86efac;
+      }
+
+      .achievement.retired {
+        opacity: 0.72;
+      }
+
+      .activity-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .activity-card {
+        min-width: 0;
+        padding: 1rem;
+        border: 1px solid #334155;
+        border-radius: 6px;
+      }
+
+      .activity-card label {
+        margin-top: 0.75rem;
+      }
+
+      .activity-card p {
+        margin-bottom: 0.5rem;
+      }
+
+      .activity-result {
+        color: #fbbf24;
+      }
+
       @media (max-width: 600px) {
         form,
         .summary,
-        .breakdowns {
+        .breakdowns,
+        .achievement-grid,
+        .activity-grid {
           grid-template-columns: 1fr;
         }
       }
@@ -166,13 +231,47 @@
   <body>
     <main>
       <header class="tool-header">
-        <p><a href="index.html">GitHub Achievement Tracker</a></p>
-        <h1>Pull Shark PR Analyzer</h1>
-        <p>Review merged pull request activity by year and repository.</p>
+        <p><a href="https://github.com/ranjiGT">ranjiGT on GitHub</a></p>
+        <h1>GitHub Achievements</h1>
+        <p>Explore achievement types and analyze merged pull request activity.</p>
       </header>
 
+      <section class="panel" aria-labelledby="achievements-heading">
+        <h2 id="achievements-heading">Achievement catalog</h2>
+        <p id="achievement-status" class="status" role="status" aria-live="polite"></p>
+        <div id="achievement-list" class="achievement-grid"></div>
+        <p class="note">GitHub does not expose achievement inventory through its public API. Badges are marked verified only for the ranjiGT public profile; other users can browse the catalog and check their own profile.</p>
+      </section>
+
+      <section class="panel" aria-labelledby="activity-heading">
+        <h2 id="activity-heading">Estimate badge progress</h2>
+        <p class="note">Enter your activity counts. GitHub does not publish these counters through its public API, and level thresholds are community-reported estimates.</p>
+        <p id="activity-account" class="status" aria-live="polite"></p>
+        <div class="activity-grid">
+          <article class="activity-card">
+            <h3>Pair Extraordinaire</h3>
+            <p>Successfully merged co-authored pull requests</p>
+            <label for="pair-count">Merged co-authored PRs
+              <input id="pair-count" type="number" min="0" step="1" value="48" inputmode="numeric" />
+            </label>
+            <p id="pair-progress" class="activity-result" aria-live="polite"></p>
+            <progress id="pair-progress-bar" max="100" value="0" aria-label="Pair Extraordinaire progress to next level"></progress>
+          </article>
+          <article class="activity-card">
+            <h3>Galaxy Brain</h3>
+            <p>Discussion answers marked as the accepted answer</p>
+            <label for="brain-count">Accepted discussion answers
+              <input id="brain-count" type="number" min="0" step="1" value="32" inputmode="numeric" />
+            </label>
+            <p id="brain-progress" class="activity-result" aria-live="polite"></p>
+            <progress id="brain-progress-bar" max="100" value="0" aria-label="Galaxy Brain progress to next level"></progress>
+          </article>
+        </div>
+      </section>
+
       <section class="panel" aria-labelledby="lookup-heading">
-        <h2 id="lookup-heading">GitHub account</h2>
+        <h2 id="lookup-heading">Pull Shark activity</h2>
+        <p>Search for a GitHub username to see merged pull requests by year and repository.</p>
         <form id="pull-shark-form">
           <label for="github-username">
             Username
@@ -187,6 +286,13 @@
     </main>
 
     <script type="module">
+      import {
+        getAchievementActivityProgress,
+        getVerifiedAchievements,
+        getVerifiedActivityMinimums,
+        githubAchievementCatalog,
+        tieredAchievementTargets
+      } from './src/achievements.js';
       import { fetchMergedPullRequests, getPullSharkProgress } from './src/pull-shark.js';
 
       const form = document.getElementById('pull-shark-form');
@@ -194,6 +300,84 @@
       const status = document.getElementById('pull-shark-status');
       const results = document.getElementById('pull-shark-results');
       const submit = document.getElementById('pull-shark-submit');
+      const achievementStatus = document.getElementById('achievement-status');
+      const achievementList = document.getElementById('achievement-list');
+      const activityAccount = document.getElementById('activity-account');
+      let activityUsername = usernameInput.value.trim();
+
+      function setActivityUsername(username) {
+        activityUsername = username;
+        const minimums = getVerifiedActivityMinimums(username);
+        document.getElementById('pair-count').value = String(minimums?.pairExtraordinaire ?? 0);
+        document.getElementById('brain-count').value = String(minimums?.galaxyBrain ?? 0);
+        activityAccount.textContent = minimums
+          ? `Starting counts are minimums implied by @${username}'s verified level 4 badges; replace them with exact counts if known.`
+          : `Counts entered below are for @${username}; they are not fetched from GitHub.`;
+        updateActivityProgress();
+      }
+
+      function renderActivityProgress(inputId, resultId, progressId, badgeName) {
+        const count = Number(document.getElementById(inputId).value) || 0;
+        const progress = getAchievementActivityProgress(count, tieredAchievementTargets[badgeName]);
+        const result = document.getElementById(resultId);
+        const progressBar = document.getElementById(progressId);
+
+        result.textContent = progress.nextTarget === null
+          ? `Level ${progress.level} reached. Highest listed level.`
+          : `Level ${progress.level || 'not yet earned'} · ${progress.remaining} more to level ${progress.level + 1} (${progress.nextTarget} total).`;
+        progressBar.value = progress.progressPercent;
+        progressBar.setAttribute('aria-label', `${badgeName}: ${progress.remaining} activities to next level`);
+      }
+
+      function updateActivityProgress() {
+        renderActivityProgress('pair-count', 'pair-progress', 'pair-progress-bar', 'Pair Extraordinaire');
+        renderActivityProgress('brain-count', 'brain-progress', 'brain-progress-bar', 'Galaxy Brain');
+      }
+
+      function renderAchievements(username) {
+        const verified = getVerifiedAchievements(username);
+        const verifiedByName = new Map(
+          (verified ?? []).map(({ name, level }) => [name.toLowerCase(), level])
+        );
+        const cards = githubAchievementCatalog.map((achievement) => {
+          const card = document.createElement('article');
+          const name = document.createElement('strong');
+          const status = document.createElement('span');
+          const level = verifiedByName.get(achievement.name.toLowerCase());
+          const earned = verifiedByName.has(achievement.name.toLowerCase());
+
+          card.className = `achievement${earned ? ' earned' : ''}${achievement.availability === 'retired' ? ' retired' : ''}`;
+          name.textContent = achievement.name;
+          status.textContent = achievement.availability === 'retired'
+            ? 'Retired achievement'
+            : earned
+              ? `Verified on @${username}${level ? ` · level ${level}` : ''}`
+              : verified
+                ? 'Not shown on public profile'
+                : 'Check profile to verify';
+          card.append(name, status);
+          return card;
+        });
+
+        achievementList.replaceChildren(...cards);
+        const profileLink = document.createElement('a');
+        profileLink.href = `https://github.com/${encodeURIComponent(username)}?tab=achievements`;
+        profileLink.target = '_blank';
+        profileLink.rel = 'noreferrer';
+        profileLink.textContent = `View @${username}'s official achievements`;
+        achievementStatus.replaceChildren(
+          document.createTextNode(verified
+            ? `Public profile achievements for @${username}. `
+            : `Achievements for @${username} are not available through GitHub's public API. `),
+          profileLink
+        );
+      }
+
+      renderAchievements(usernameInput.value);
+      setActivityUsername(activityUsername);
+      updateActivityProgress();
+      document.getElementById('pair-count').addEventListener('input', updateActivityProgress);
+      document.getElementById('brain-count').addEventListener('input', updateActivityProgress);
 
       function createBreakdown(title, entries, labelForEntry) {
         const section = document.createElement('section');
@@ -272,9 +456,14 @@
           return;
         }
 
+        if (username.toLowerCase() !== activityUsername.toLowerCase()) {
+          setActivityUsername(username);
+        }
+
         submit.disabled = true;
         status.textContent = 'Searching GitHub for merged pull requests...';
         results.replaceChildren();
+        renderAchievements(username);
 
         try {
           renderResults(username, await fetchMergedPullRequests(username));
