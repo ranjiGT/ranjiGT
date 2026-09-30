@@ -6,7 +6,9 @@ import {
   summarizePullRequests
 } from '../src/pull-shark.js';
 import {
+  achievementProgressDefinitions,
   getAchievementActivityProgress,
+  getInitialActivityCounts,
   getVerifiedAchievements,
   getVerifiedActivityMinimums,
   githubAchievementCatalog,
@@ -14,8 +16,12 @@ import {
 } from '../src/achievements.js';
 
 test('lists current and retired GitHub achievement types', () => {
-  assert.equal(githubAchievementCatalog.filter(({ availability }) => availability === 'available').length, 8);
+  const availableAchievements = githubAchievementCatalog.filter(({ availability }) => availability === 'available');
+
+  assert.equal(availableAchievements.length, 8);
   assert.equal(githubAchievementCatalog.filter(({ availability }) => availability === 'retired').length, 2);
+  assert.equal(Object.keys(achievementProgressDefinitions).length, 8);
+  assert.ok(availableAchievements.every(({ name }) => achievementProgressDefinitions[name]));
 });
 
 test('returns only publicly verified achievements for ranjiGT', () => {
@@ -32,6 +38,8 @@ test('returns only publicly verified achievements for ranjiGT', () => {
     galaxyBrain: 32
   });
   assert.equal(getVerifiedActivityMinimums('octocat'), null);
+  assert.equal(getInitialActivityCounts('octocat')['Pair Extraordinaire'], 0);
+  assert.equal(getInitialActivityCounts('ranjiGT').Starstruck, 16);
 });
 
 test('calculates remaining Pair Extraordinaire and Galaxy Brain activity', () => {

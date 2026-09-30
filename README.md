@@ -216,7 +216,7 @@ Achievements currently visible on the [ranjiGT GitHub profile](https://github.co
   <a href="https://github.com/ranjiGT?tab=achievements"><img alt="Starstruck" src="https://img.shields.io/badge/Starstruck-Earned-2ea44f?style=flat-square"/></a>
 </p>
 
-The analyzer lists GitHub achievement types for any username. It also estimates how many more merged co-authored PRs or accepted discussion answers are needed for Pair Extraordinaire and Galaxy Brain levels. Enter those activity counts manually; GitHub does not provide them through its public API, and level thresholds are community-reported estimates.
+The analyzer looks up a username once, then shows progress for every current achievement. Pull Shark merged PRs are fetched automatically; enter activity counts manually for other badges. GitHub does not expose most achievement counters or badge inventory through its public API, and level thresholds are community-reported estimates.
 
 GitHub does not provide a public API for achievement inventory. The badges above are verified from this profile; the tool does not claim to know another user's earned badges.
 
