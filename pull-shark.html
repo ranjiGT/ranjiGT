@@ -100,14 +100,15 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        gap: 0.55rem;
+        width: 2.75rem;
         min-height: 2.6rem;
-        padding: 0.45rem 0.75rem;
+        padding: 0;
         border: 1px solid var(--border);
         border-radius: 6px;
         background: var(--card-bg);
         color: var(--text);
-        white-space: nowrap;
+        font-size: 1.3rem;
+        line-height: 1;
       }
 
       .theme-toggle:hover {
@@ -357,9 +358,8 @@
       <header class="tool-header">
         <div class="tool-header-row">
           <a id="github-profile-link" href="https://github.com/ranjiGT">GitHub profile</a>
-          <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
+          <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch to light theme" aria-pressed="false">
             <span id="theme-icon" aria-hidden="true">☀</span>
-            <span id="theme-label">Light theme</span>
           </button>
         </div>
         <h1>GitHub Achievements</h1>
@@ -428,7 +428,6 @@
       const submit = document.getElementById('profile-submit');
       const themeToggle = document.getElementById('theme-toggle');
       const themeIcon = document.getElementById('theme-icon');
-      const themeLabel = document.getElementById('theme-label');
       const achievementStatus = document.getElementById('achievement-status');
       const achievementList = document.getElementById('achievement-list');
       const achievementBreakdown = document.getElementById('achievement-breakdown');
@@ -442,8 +441,8 @@
         const light = theme === 'light';
         document.documentElement.dataset.theme = light ? 'light' : 'dark';
         themeIcon.textContent = light ? '☾' : '☀';
-        themeLabel.textContent = light ? 'Dark theme' : 'Light theme';
         themeToggle.setAttribute('aria-label', `Switch to ${light ? 'dark' : 'light'} theme`);
+        themeToggle.title = `Switch to ${light ? 'dark' : 'light'} theme`;
         themeToggle.setAttribute('aria-pressed', String(light));
 
         if (!savePreference) return;
