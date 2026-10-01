@@ -51,52 +51,16 @@ export const tieredAchievementTargets = Object.fromEntries(
   Object.entries(achievementProgressDefinitions).map(([name, definition]) => [name, definition.targets])
 );
 
-const verifiedAchievements = new Map([
-  ['pair extraordinaire', 4],
-  ['galaxy brain', 4],
-  ['public sponsor', null],
-  ['quickdraw', null],
-  ['pull shark', 3],
-  ['yolo', null],
-  ['starstruck', null]
-]);
-
-export function getVerifiedAchievements(username) {
-  if (username.toLowerCase() !== 'ranjigt') return null;
-
-  return githubAchievementCatalog
-    .filter((achievement) => verifiedAchievements.has(achievement.name.toLowerCase()))
-    .map(({ name }) => ({ name, level: verifiedAchievements.get(name.toLowerCase()) }));
-}
-
-export function getVerifiedActivityMinimums(username) {
-  const achievements = getVerifiedAchievements(username);
-  if (!achievements) return null;
-
-  const levels = new Map(achievements.map(({ name, level }) => [name, level]));
-  return {
-    pairExtraordinaire: tieredAchievementTargets['Pair Extraordinaire'][levels.get('Pair Extraordinaire') - 1],
-    galaxyBrain: tieredAchievementTargets['Galaxy Brain'][levels.get('Galaxy Brain') - 1]
-  };
-}
-
-export function getInitialActivityCounts(username) {
+export function getInitialActivityCounts(achievements = []) {
   const counts = Object.fromEntries(
     Object.keys(achievementProgressDefinitions).map((name) => [name, 0])
   );
-  const verified = getVerifiedAchievements(username);
 
-  for (const achievement of verified ?? []) {
+  for (const achievement of achievements) {
     const definition = achievementProgressDefinitions[achievement.name];
     if (!definition || definition.source === 'github') continue;
     const level = achievement.level ?? 1;
-    counts[achievement.name] = definition.targets[level - 1] ?? definition.targets[0];
-  }
-
-  const minimums = getVerifiedActivityMinimums(username);
-  if (minimums) {
-    counts['Pair Extraordinaire'] = minimums.pairExtraordinaire;
-    counts['Galaxy Brain'] = minimums.galaxyBrain;
+    counts[achievement.name] = definition.targets[Math.min(level, definition.targets.length) - 1] ?? definition.targets[0];
   }
 
   return counts;

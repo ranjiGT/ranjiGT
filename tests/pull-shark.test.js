@@ -10,8 +10,6 @@ import {
   getAchievementActivityProgress,
   getAchievementBreakdown,
   getInitialActivityCounts,
-  getVerifiedAchievements,
-  getVerifiedActivityMinimums,
   githubAchievementCatalog,
   tieredAchievementTargets
 } from '../src/achievements.js';
@@ -26,22 +24,17 @@ test('lists current and retired GitHub achievement types', () => {
   assert.ok(availableAchievements.every(({ name }) => achievementProgressDefinitions[name]));
 });
 
-test('returns only publicly verified achievements for ranjiGT', () => {
-  const achievements = getVerifiedAchievements('ranjiGT');
+test('seeds every username activity count from its fetched achievement levels', () => {
+  const counts = getInitialActivityCounts([
+    { name: 'Pair Extraordinaire', level: 4 },
+    { name: 'Galaxy Brain', level: 2 },
+    { name: 'Pull Shark', level: 3 }
+  ]);
 
-  assert.equal(achievements.length, 7);
-  assert.deepEqual(achievements.find(({ name }) => name === 'Pair Extraordinaire'), {
-    name: 'Pair Extraordinaire',
-    level: 4
-  });
-  assert.equal(getVerifiedAchievements('octocat'), null);
-  assert.deepEqual(getVerifiedActivityMinimums('ranjiGT'), {
-    pairExtraordinaire: 48,
-    galaxyBrain: 32
-  });
-  assert.equal(getVerifiedActivityMinimums('octocat'), null);
-  assert.equal(getInitialActivityCounts('octocat')['Pair Extraordinaire'], 0);
-  assert.equal(getInitialActivityCounts('ranjiGT').Starstruck, 16);
+  assert.equal(counts['Pair Extraordinaire'], 48);
+  assert.equal(counts['Galaxy Brain'], 8);
+  assert.equal(counts['Pull Shark'], 0);
+  assert.equal(getInitialActivityCounts()['Pair Extraordinaire'], 0);
 });
 
 test('calculates remaining Pair Extraordinaire and Galaxy Brain activity', () => {

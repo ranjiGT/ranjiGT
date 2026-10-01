@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="achievements-api-origin" content="" />
     <meta name="description" content="Browse GitHub achievement types and analyze merged pull requests by year and repository." />
     <title>GitHub Achievements and Pull Shark Analyzer</title>
     <style>
@@ -234,6 +235,13 @@
         line-height: 1;
       }
 
+      .achievement-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 8px;
+      }
+
       .achievement > span {
         display: block;
         margin-top: 0.35rem;
@@ -314,7 +322,7 @@
             <tbody id="achievement-breakdown"></tbody>
           </table>
         </div>
-        <p class="note">Pull Shark activity is fetched from GitHub. Enter activity counts manually for other badges; GitHub does not expose a public API for badge inventory or most badge counters. Other profiles link to their official achievements page for verification.</p>
+        <p class="note">Earned badges are parsed server-side from public GitHub profiles. Pull Shark counts are fetched automatically; enter qualifying activity counts manually for other achievements.</p>
       </section>
 
       <section class="panel" aria-labelledby="lookup-heading">
@@ -331,7 +339,6 @@
         getAchievementActivityProgress,
         getAchievementBreakdown,
         getInitialActivityCounts,
-        getVerifiedAchievements,
         githubAchievementCatalog,
       } from './src/achievements.js';
       import { fetchMergedPullRequests, getPullSharkProgress } from './src/pull-shark.js';
@@ -347,23 +354,41 @@
       const achievementList = document.getElementById('achievement-list');
       const achievementBreakdown = document.getElementById('achievement-breakdown');
       let activeUsername = usernameInput.value.trim();
-      let activityCounts = getInitialActivityCounts(activeUsername);
+      let activityCounts = getInitialActivityCounts();
       let mergedPullRequestCount = null;
+      let publicAchievements = null;
+      let achievementLoadError = null;
+
+      async function fetchPublicAchievements(username) {
+        const configuredOrigin = document.querySelector('meta[name="achievements-api-origin"]').content.trim();
+        const apiOrigin = configuredOrigin || window.location.origin;
+        const endpoint = new URL('/api/achievements', apiOrigin);
+        endpoint.searchParams.set('username', username);
+        const response = await fetch(endpoint);
+        if (!response.headers.get('content-type')?.includes('application/json')) {
+          throw new Error('Achievement service is not connected. Deploy the API to Vercel and set its origin in this page configuration.');
+        }
+        const data = await response.json();
+
+        if (!response.ok) throw new Error(data.error || 'Could not load GitHub achievements.');
+        return data;
+      }
+
+      function seedActivityCounts(achievements) {
+        activityCounts = getInitialActivityCounts(achievements);
+      }
 
       function renderAchievements(username) {
         profileLink.href = `https://github.com/${encodeURIComponent(username)}`;
-        const verified = getVerifiedAchievements(username);
-        const verifiedByName = new Map(
-          (verified ?? []).map(({ name, level }) => [name.toLowerCase(), level])
-        );
+        const verifiedByName = new Map((publicAchievements ?? []).map((achievement) => [achievement.name.toLowerCase(), achievement]));
         const cards = githubAchievementCatalog.map((achievement, index) => {
           const card = document.createElement('article');
           const title = document.createElement('div');
           const icon = document.createElement('span');
           const name = document.createElement('strong');
           const status = document.createElement('span');
-          const verifiedLevel = verifiedByName.get(achievement.name.toLowerCase());
-          const earned = verifiedByName.has(achievement.name.toLowerCase());
+          const badge = verifiedByName.get(achievement.name.toLowerCase());
+          const earned = Boolean(badge);
 
           card.className = `achievement${earned ? ' earned' : ''}${achievement.availability === 'retired' ? ' retired' : ''}`;
           title.className = 'achievement-title';
@@ -374,10 +399,18 @@
           status.textContent = achievement.availability === 'retired'
             ? 'Retired achievement'
             : earned
-              ? `Verified on @${username}${verifiedLevel ? ` · level ${verifiedLevel}` : ''}`
-              : verified
-                ? 'Not shown on public profile'
-                : 'Check profile to verify';
+              ? `Earned by @${username}${badge.level ? ` · level ${badge.level}` : ''}${badge.tier ? ` · ${badge.tier} tier` : ''}`
+              : publicAchievements !== null
+                ? 'Not listed on public profile'
+                : achievementLoadError
+                  ? 'Could not verify from public profile'
+                  : 'Loading public profile';
+          if (badge?.imageUrl) {
+            const badgeImage = document.createElement('img');
+            badgeImage.src = badge.imageUrl;
+            badgeImage.alt = '';
+            icon.replaceChildren(badgeImage);
+          }
           title.append(icon, name);
           card.append(title, status);
 
@@ -426,9 +459,11 @@
         achievementsLink.rel = 'noreferrer';
         achievementsLink.textContent = `View @${username}'s official achievements`;
         achievementStatus.replaceChildren(
-          document.createTextNode(verified
-            ? `Public profile achievements for @${username}. `
-            : `Achievements for @${username} are not available through GitHub's public API. `),
+          document.createTextNode(publicAchievements !== null
+            ? `${publicAchievements.length} publicly visible achievements for @${username}. `
+            : achievementLoadError
+              ? `${achievementLoadError} `
+              : `Loading public achievements for @${username}. `),
           achievementsLink
         );
       }
@@ -565,31 +600,52 @@
 
         if (username.toLowerCase() !== activeUsername.toLowerCase()) {
           activeUsername = username;
-          activityCounts = getInitialActivityCounts(username);
+          activityCounts = getInitialActivityCounts();
         }
 
         submit.disabled = true;
-        status.textContent = 'Searching GitHub for merged pull requests...';
-        profileStatus.textContent = `Loading achievement progress for @${username}...`;
+        status.textContent = `Searching GitHub for merged pull requests by @${username}...`;
+        profileStatus.textContent = `Loading @${username}'s public profile and achievement data...`;
         results.replaceChildren();
         mergedPullRequestCount = null;
+        publicAchievements = null;
+        achievementLoadError = null;
         renderAchievements(username);
         renderAchievementBreakdown();
 
         try {
-          const report = await fetchMergedPullRequests(username);
-          mergedPullRequestCount = report.totalCount;
+          const [achievementResult, pullRequestResult] = await Promise.allSettled([
+            fetchPublicAchievements(username),
+            fetchMergedPullRequests(username)
+          ]);
+
+          if (achievementResult.status === 'fulfilled') {
+            publicAchievements = achievementResult.value.achievements;
+            seedActivityCounts(publicAchievements);
+          } else {
+            achievementLoadError = achievementResult.reason.message;
+          }
+
           renderAchievements(username);
           renderAchievementBreakdown();
-          renderResults(username, report);
-          profileStatus.textContent = `Achievement progress for @${username}.`;
-        } catch (error) {
-          status.textContent = error.message;
-          profileStatus.textContent = `Showing estimates for @${username}; Pull Shark data could not be loaded.`;
+          if (pullRequestResult.status === 'fulfilled') {
+            mergedPullRequestCount = pullRequestResult.value.totalCount;
+            renderAchievements(username);
+            renderAchievementBreakdown();
+            renderResults(username, pullRequestResult.value);
+          } else {
+            status.textContent = pullRequestResult.reason.message;
+          }
+
+          profileStatus.textContent = achievementResult.status === 'fulfilled'
+            ? `Achievement data loaded for @${username}.`
+            : `Could not load @${username}'s achievement data.`;
         } finally {
           submit.disabled = false;
         }
       });
+
+      form.requestSubmit();
     </script>
   </body>
 </html>
