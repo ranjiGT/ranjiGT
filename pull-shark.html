@@ -400,6 +400,8 @@
             ? 'Retired achievement'
             : earned
               ? `Earned by @${username}${badge.level ? ` · level ${badge.level}` : ''}${badge.tier ? ` · ${badge.tier} tier` : ''}`
+              : achievement.availability === 'internal'
+                ? 'Internal achievement · not generally earnable'
               : publicAchievements !== null
                 ? 'Not listed on public profile'
                 : achievementLoadError

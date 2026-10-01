@@ -7,6 +7,9 @@ export const githubAchievementCatalog = [
   { name: 'Pull Shark', icon: '🦈', availability: 'available' },
   { name: 'YOLO', icon: '🚀', availability: 'available' },
   { name: 'Starstruck', icon: '⭐', availability: 'available' },
+  { name: 'Proxima Pioneer', icon: '🚀', availability: 'internal' },
+  { name: 'Proxima Staffshipper', icon: '🛰️', availability: 'internal' },
+  { name: 'Proxima Staffuser', icon: '🧑‍🚀', availability: 'internal' },
   { name: 'Arctic Code Vault Contributor', icon: '❄️', availability: 'retired' },
   { name: 'Mars 2020 Contributor', icon: '🪐', availability: 'retired' }
 ];

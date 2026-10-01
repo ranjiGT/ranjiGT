@@ -16,8 +16,14 @@ import {
 
 test('lists current and retired GitHub achievement types', () => {
   const availableAchievements = githubAchievementCatalog.filter(({ availability }) => availability === 'available');
+  const internalAchievements = githubAchievementCatalog.filter(({ availability }) => availability === 'internal');
 
   assert.equal(availableAchievements.length, 8);
+  assert.deepEqual(internalAchievements.map(({ name }) => name), [
+    'Proxima Pioneer',
+    'Proxima Staffshipper',
+    'Proxima Staffuser'
+  ]);
   assert.equal(githubAchievementCatalog.filter(({ availability }) => availability === 'retired').length, 2);
   assert.equal(Object.keys(achievementProgressDefinitions).length, 8);
   assert.ok(githubAchievementCatalog.every(({ icon }) => icon));
