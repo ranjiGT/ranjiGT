@@ -1,53 +1,49 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Ranji%20Raj&fontSize=62&fontColor=fff&animation=twinkling&fontAlignY=32&desc=Data%20Scientist%20%7C%20YouTuber%20%7C%20Open%20Source%20Enthusiast&descAlignY=55&descSize=18" width="100%"/>
-
 <p align="center">
-  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&center=true&vCenter=true&width=750&lines=Data+Lover+%26+Content+Creator+%F0%9F%93%8A;6%2B+Years+in+Automation+Engineering+%F0%9F%A4%96;M.Sc.+in+Data+Science+from+Germany+%F0%9F%8E%93;YouTuber+%7C+57K%2B+Subscribers+%F0%9F%8E%AC;Deep+Learning+%7C+ML+%7C+Python+%7C+R;Building+the+next+generation+of+data+scientists" alt="Typing SVG" /></a>
+  <a href="https://github.com/ranjiGT"><img src="https://avatars.githubusercontent.com/u/64376506?v=4" width="112" height="112" alt="Ranji Raj's GitHub avatar"/></a>
 </p>
 
-<!-- Social icons section -->
+<h1 align="center">Ranji Raj</h1>
+
 <p align="center">
-  <a href="https://www.youtube.com/c/RanjiRaj18"><img height="35" alt="YouTube" title="YouTube" src="https://img.shields.io/badge/-YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white"/></a>
-  &#8287;
-  <a href="https://www.linkedin.com/in/reng99/"><img height="35" alt="LinkedIn" title="LinkedIn" src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-  &#8287;
-  <a href="https://x.com/iamRanjiRaj"><img height="35" alt="X" title="X (Twitter)" src="https://img.shields.io/badge/-X-000000?style=for-the-badge&logo=x&logoColor=white"/></a>
-  &#8287;
-  <a href="https://stackoverflow.com/users/14512983/ranji-raj"><img height="35" alt="Stack Overflow" title="Stack Overflow" src="https://img.shields.io/badge/-Stack%20Overflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white"/></a>
-  &#8287;
-  <a href="https://www.kaggle.com/ranjiraj"><img height="35" alt="Kaggle" title="Kaggle" src="https://img.shields.io/badge/-Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white"/></a>
+  <strong>Data scientist · automation engineer · educator</strong><br/>
+  M.Sc. Data Science · Applied AI and learning tools · Frankfurt, Germany
 </p>
 
----
-
-### 🙋‍♂️ About Me
-
-> **`Ran`** is pronounced like **RUN**, **`ji`** is pronounced like English alphabet **G**
-
-- 🎓 M.Sc. in Data Science from Germany
-- 🤖 6+ years of experience in Automation Engineering
-- 🎬 Passionate about teaching Data Science & Deep Learning on YouTube
-- 🔭 Currently building educational content on Neural Networks & LLMs
-- 🌱 Always exploring the intersection of MLOps and applied AI
-- 💬 Ask me about **Python**, **Deep Learning**, **ML pipelines**, or **Data Viz**
-- ⚡ Fun fact: I can explain backpropagation to a 10-year-old
-
-<!-- Social badges section -->
 <p align="center">
-  <a href="https://www.youtube.com/c/RanjiRaj18?sub_confirmation=1">
-    <img alt="youtube subscribers" title="Subscribe to my YouTube channel" src="https://custom-icon-badges.demolab.com/youtube/channel/subscribers/UCl1Tqc3U-TAOjuh4izHLsUw?color=%23E05D44&label=SUBSCRIBE&logo=video&logoColor=white&style=for-the-badge&labelColor=CE4630"/></a>
-  <a href="https://www.youtube.com/c/RanjiRaj18">
-    <img alt="youtube views" title="YouTube views" src="https://custom-icon-badges.demolab.com/youtube/channel/views/UCl1Tqc3U-TAOjuh4izHLsUw?color=%23E1AD0E&logo=video&logoColor=white&style=for-the-badge&labelColor=C79600"/></a>
-  <a href="https://github.com/ranjiGT?tab=repositories&sort=stargazers">
-    <img alt="total stars" title="Total stars on GitHub" src="https://custom-icon-badges.demolab.com/github/stars/ranjiGT?color=55960c&style=for-the-badge&labelColor=488207&logo=star"/></a>
-  <a href="https://github.com/ranjiGT?tab=followers">
-    <img alt="followers" title="Follow me on Github" src="https://custom-icon-badges.demolab.com/github/followers/ranjiGT?color=236ad3&labelColor=1155ba&style=for-the-badge&logo=person-add&label=Follow&logoColor=white"/></a>
-  <a href="https://komarev.com/ghpvc/?username=ranjiGT">
-    <img alt="views" title="GitHub profile views" src="https://komarev.com/ghpvc/?username=ranjiGT&color=blue&style=for-the-badge"/></a>
+  <a href="https://www.youtube.com/c/RanjiRaj18"><img alt="YouTube" src="https://img.shields.io/badge/YouTube-FF0033?style=flat-square&logo=youtube&logoColor=white"/></a>
+  <a href="https://www.linkedin.com/in/reng99/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white"/></a>
+  <a href="https://x.com/iamRanjiRaj"><img alt="X" src="https://img.shields.io/badge/X-111111?style=flat-square&logo=x&logoColor=white"/></a>
+  <a href="https://stackoverflow.com/users/14512983/ranji-raj"><img alt="Stack Overflow" src="https://img.shields.io/badge/Stack_Overflow-F48024?style=flat-square&logo=stackoverflow&logoColor=white"/></a>
+  <a href="https://www.kaggle.com/ranjiraj"><img alt="Kaggle" src="https://img.shields.io/badge/Kaggle-20BEFF?style=flat-square&logo=kaggle&logoColor=white"/></a>
+</p>
+
+<p align="center">
+  <a href="#about">About</a> ·
+  <a href="#recent-lessons">Videos</a> ·
+  <a href="#toolbox">Toolbox</a> ·
+  <a href="#open-source">Open source</a> ·
+  <a href="#github-achievements">Achievements</a> ·
+  <a href="#github-activity">GitHub activity</a>
 </p>
 
 ---
 
-## 📺 Recent YouTube Lessons
+## About
+
+> **Ran** rhymes with **run**; **ji** is pronounced like the letter **G**.
+
+I have 6+ years in automation engineering and create practical learning content on data science, deep learning, and applied AI. I’m currently exploring neural networks, LLMs, and MLOps.
+
+**Ask me about:** Python, deep learning, ML pipelines, and data visualization.<br/>
+**Fun fact:** I can explain backpropagation to a 10-year-old.
+
+<p align="center">
+  <a href="https://www.youtube.com/c/RanjiRaj18?sub_confirmation=1"><img alt="YouTube subscribers" src="https://custom-icon-badges.demolab.com/youtube/channel/subscribers/UCl1Tqc3U-TAOjuh4izHLsUw?color=%23E05D44&label=subscribers&logo=video&logoColor=white&style=flat-square&labelColor=CE4630"/></a>
+  <a href="https://github.com/ranjiGT?tab=followers"><img alt="GitHub followers" src="https://custom-icon-badges.demolab.com/github/followers/ranjiGT?color=236ad3&label=followers&logo=person-add&logoColor=white&style=flat-square&labelColor=1155ba"/></a>
+  <a href="https://github.com/ranjiGT?tab=repositories&sort=stargazers"><img alt="GitHub stars" src="https://custom-icon-badges.demolab.com/github/stars/ranjiGT?color=55960c&label=stars&logo=star&style=flat-square&labelColor=488207"/></a>
+</p>
+
+## Recent Lessons
 
 <!-- BEGIN YOUTUBE-CARDS -->
 [![Macros and Meta Programming in LaTeX using Overleaf | Tutorial 8](https://ytcards.demolab.com/?id=-fYFbvAlX4o&title=Macros+and+Meta+Programming+in+LaTeX+using+Overleaf+%7C+Tutorial+8&lang=en&timestamp=1779455941&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&max_title_lines=1&width=250&border_radius=5 "Macros and Meta Programming in LaTeX using Overleaf | Tutorial 8")](https://www.youtube.com/watch?v=-fYFbvAlX4o)
@@ -60,9 +56,9 @@
 
 ---
 
-## 🛠️ Tech Stack
+## Toolbox
 
-<details open>
+<details>
 <summary><b>👨‍💻 Languages</b></summary>
 <br>
 <p>
@@ -76,7 +72,7 @@
 </p>
 </details>
 
-<details open>
+<details>
 <summary><b>🧠 Machine Learning & Data Science</b></summary>
 <br>
 <p>
@@ -136,7 +132,7 @@
 
 ---
 
-## 🌍 Open Source Contributions
+## Open source
 
 | Project | Contribution | Impact |
 |---|---|---|
@@ -196,13 +192,15 @@
 
 ---
 
-## Pull Shark PR Analyzer
+## GitHub achievements
 
-Analyze merged pull request totals, yearly activity, repository breakdowns, and estimated badge progress with the standalone [Pull Shark PR Analyzer](https://ranjigt.github.io/ranjiGT/pull-shark.html).
+Explore earned public badges, level progress, and merged pull request activity for any GitHub username.
 
-Run the parser tests locally with `npm install` and `npm test`. For a complete frontend and API preview, install the [Vercel CLI](https://vercel.com/docs/cli) and run `vercel dev`.
+<p align="center">
+  <a href="https://ranjigt-github-achievement-catalog.vercel.app/pull-shark.html"><img alt="Open the GitHub Achievement Catalog" src="https://img.shields.io/badge/OPEN-Live%20Achievement%20Catalog-D97706?style=for-the-badge"/></a>
+</p>
 
-### GitHub Achievements
+### Verified profile badges
 
 Achievements currently visible on the [ranjiGT GitHub profile](https://github.com/ranjiGT?tab=achievements):
 
@@ -216,20 +214,22 @@ Achievements currently visible on the [ranjiGT GitHub profile](https://github.co
   <a href="https://github.com/ranjiGT?tab=achievements"><img alt="Starstruck" src="https://img.shields.io/badge/Starstruck-Earned-2ea44f?style=flat-square"/></a>
 </p>
 
-The analyzer looks up a username once, then shows public achievements parsed from that user's GitHub profile. Pull Shark merged PRs are fetched automatically; enter activity counts manually for other badges. GitHub does not expose most achievement counters through its public API, and level thresholds are community-reported estimates.
+The catalog looks up a username once, then shows public achievements parsed from that user's GitHub profile. Pull Shark merged PRs are fetched automatically; enter activity counts manually for other badges. GitHub does not expose most achievement counters through its public API, and level thresholds are community-reported estimates.
 
 The Achievement activity breakdown summarizes each current badge, its qualifying activity, current count, level, and remaining activity to the next level. The table updates when you edit a badge's activity count or run the username lookup.
 
 Achievement inventory is read server-side from the public GitHub profile HTML; private or hidden achievements cannot be shown.
 
-### Deploy the lookup service
+<details>
+<summary>Developer setup and deployment</summary>
 
-1. Import this repository into Vercel with the **Other** framework preset and no build command. Vercel will deploy the static page and `/api/achievements` function together.
-2. Verify the endpoint at `https://<your-vercel-project>.vercel.app/api/achievements?username=Njengah`.
-3. If keeping the frontend on GitHub Pages, set the `achievements-api-origin` meta tag in [pull-shark.html](pull-shark.html) to your Vercel project origin. Add that Pages origin as a CORS allowlist if it is not the default.
-4. If Vercel hosts the frontend too, leave the API-origin meta tag empty; the page will use the same origin automatically.
+Run `npm install` and `npm test` for parser checks. For a complete frontend and API preview, install the [Vercel CLI](https://vercel.com/docs/cli) and run `vercel dev`.
+</details>
 
-## 📊 GitHub Stats
+## GitHub activity
+
+<details>
+<summary>Repository statistics and contribution visuals</summary>
 
 <p align="center">
   <a href="https://github.com/anuraghazra/github-readme-stats">
@@ -240,7 +240,7 @@ Achievement inventory is read server-side from the public GitHub profile HTML; p
   </a>
 </p>
 
-## 🔥 Streak Stats
+### Contribution streak
 
 <p align="center">
   <a href="https://git.io/streak-stats">
@@ -254,7 +254,7 @@ Achievement inventory is read server-side from the public GitHub profile HTML; p
   </a>
 </p>
 
-## 🐍 Contribution Snake
+### Contribution snake
 
 <p align="center">
   <picture>
@@ -264,12 +264,17 @@ Achievement inventory is read server-side from the public GitHub profile HTML; p
   </picture>
 </p>
 
+</details>
+
 ---
 
-##  Dev Joke of the Day
+<details>
+<summary>Developer joke</summary>
 
 <p align="center">
   <img src="https://readme-jokes.vercel.app/api?theme=react&qColor=%23F85D7F&aColor=%23F8D866&borderColor=%231F222E&bgColor=%231F222E" alt="Jokes Card" />
 </p>
+
+</details>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" width="100%"/>
