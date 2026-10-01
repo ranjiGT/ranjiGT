@@ -63,6 +63,21 @@ test('parses publicly visible achievement names, levels, tiers, and profile link
   ]);
 });
 
+test('parses Proxima internal achievements without inventing a level count', () => {
+  const html = [
+    'Proxima Pioneer',
+    'Proxima Staffshipper',
+    'Proxima Staffuser'
+  ].map((name) => `<a href="/Njengah?achievement=${name.toLowerCase().replaceAll(' ', '-')}" class="position-relative"><img class="achievement-badge-sidebar" alt="Achievement: ${name}" src="/assets/proxima.png"></a>`).join('');
+
+  const { achievements } = parseGithubAchievements(html, 'Njengah');
+  assert.deepEqual(achievements.map(({ name, level }) => ({ name, level })), [
+    { name: 'Proxima Pioneer', level: null },
+    { name: 'Proxima Staffshipper', level: null },
+    { name: 'Proxima Staffuser', level: null }
+  ]);
+});
+
 test('validates GitHub usernames before making a profile request', async () => {
   assert.equal(isValidGithubUsername('Njengah'), true);
   assert.equal(isValidGithubUsername('user-name'), true);

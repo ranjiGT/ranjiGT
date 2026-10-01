@@ -220,6 +220,8 @@ The Achievement activity breakdown summarizes each current badge, its qualifying
 
 Achievement inventory is read server-side from the public GitHub profile HTML; private or hidden achievements cannot be shown.
 
+The catalog also recognizes the rare Proxima Pioneer, Proxima Staffshipper, and Proxima Staffuser badges when they appear on a public profile. GitHub labels these as internal achievements, so the catalog does not assign them public progress targets.
+
 <details>
 <summary>Developer setup and deployment</summary>
 

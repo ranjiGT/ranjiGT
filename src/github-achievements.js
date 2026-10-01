@@ -22,7 +22,8 @@ export function parseGithubAchievements(html, username) {
 
     const badge = link.find('.achievement-tier-label').first();
     const countLabel = badge.text().trim();
-    const count = Number(countLabel.match(/^x(\d+)$/i)?.[1]) || 1;
+    const countMatch = countLabel.match(/^x(\d+)$/i);
+    const count = countMatch ? Number(countMatch[1]) : null;
     const tier = badge.attr('class')?.match(/achievement-tier-label--([a-z]+)/i)?.[1]?.toLowerCase() ?? null;
     const imageUrl = image.attr('src');
     const href = link.attr('href');
