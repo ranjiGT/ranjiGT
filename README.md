@@ -200,7 +200,7 @@
 
 Analyze merged pull request totals, yearly activity, repository breakdowns, and estimated badge progress with the standalone [Pull Shark PR Analyzer](https://ranjigt.github.io/ranjiGT/pull-shark.html).
 
-Run it locally with `python3 -m http.server 8000`, then open `http://localhost:8000/pull-shark.html`.
+Run the parser tests locally with `npm install` and `npm test`. For a complete frontend and API preview, install the [Vercel CLI](https://vercel.com/docs/cli) and run `vercel dev`.
 
 ### GitHub Achievements
 
@@ -216,11 +216,18 @@ Achievements currently visible on the [ranjiGT GitHub profile](https://github.co
   <a href="https://github.com/ranjiGT?tab=achievements"><img alt="Starstruck" src="https://img.shields.io/badge/Starstruck-Earned-2ea44f?style=flat-square"/></a>
 </p>
 
-The analyzer looks up a username once, then shows progress for every current achievement. Pull Shark merged PRs are fetched automatically; enter activity counts manually for other badges. GitHub does not expose most achievement counters or badge inventory through its public API, and level thresholds are community-reported estimates.
+The analyzer looks up a username once, then shows public achievements parsed from that user's GitHub profile. Pull Shark merged PRs are fetched automatically; enter activity counts manually for other badges. GitHub does not expose most achievement counters through its public API, and level thresholds are community-reported estimates.
 
 The Achievement activity breakdown summarizes each current badge, its qualifying activity, current count, level, and remaining activity to the next level. The table updates when you edit a badge's activity count or run the username lookup.
 
-GitHub does not provide a public API for achievement inventory. The badges above are verified from this profile; the tool does not claim to know another user's earned badges.
+Achievement inventory is read server-side from the public GitHub profile HTML; private or hidden achievements cannot be shown.
+
+### Deploy the lookup service
+
+1. Import this repository into Vercel with the **Other** framework preset and no build command. Vercel will deploy the static page and `/api/achievements` function together.
+2. Verify the endpoint at `https://<your-vercel-project>.vercel.app/api/achievements?username=Njengah`.
+3. If keeping the frontend on GitHub Pages, set the `achievements-api-origin` meta tag in [pull-shark.html](pull-shark.html) to your Vercel project origin. Add that Pages origin as a CORS allowlist if it is not the default.
+4. If Vercel hosts the frontend too, leave the API-origin meta tag empty; the page will use the same origin automatically.
 
 ## 📊 GitHub Stats
 
