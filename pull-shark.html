@@ -10,15 +10,55 @@
       :root {
         color-scheme: dark;
         font-family: "Avenir Next", Avenir, sans-serif;
-        background: #0f172a;
-        color: #e2e8f0;
+        --page-bg: #0b1220;
+        --panel-bg: rgba(17, 24, 39, 0.91);
+        --text: #e2e8f0;
+        --muted: #cbd5e1;
+        --subtle: #94a3b8;
+        --border: #334155;
+        --input-bg: #0f172a;
+        --input-text: #f8fafc;
+        --accent: #f59e0b;
+        --accent-text: #111827;
+        --status: #fbbf24;
+        --card-bg: #0f172a;
+        --icon-bg: #1e293b;
+        --icon-border: #475569;
+        --earned: #22c55e;
+        --earned-text: #86efac;
+        --link: #7dd3fc;
+        --photo-overlay: linear-gradient(115deg, rgba(5, 12, 22, 0.88), rgba(9, 18, 31, 0.68) 56%, rgba(5, 12, 22, 0.82));
+        background: var(--page-bg);
+        color: var(--text);
+      }
+
+      :root[data-theme="light"] {
+        color-scheme: light;
+        --page-bg: #edf2f6;
+        --panel-bg: rgba(255, 255, 255, 0.92);
+        --text: #18232e;
+        --muted: #445566;
+        --subtle: #5c6d7c;
+        --border: #c6d2dc;
+        --input-bg: #ffffff;
+        --input-text: #18232e;
+        --accent: #d97706;
+        --accent-text: #ffffff;
+        --status: #8a4b00;
+        --card-bg: #f8fafc;
+        --icon-bg: #fff4dc;
+        --icon-border: #d8bd86;
+        --earned: #16804a;
+        --earned-text: #17633d;
+        --link: #075985;
+        --photo-overlay: linear-gradient(115deg, rgba(238, 244, 248, 0.88), rgba(244, 247, 249, 0.72) 56%, rgba(238, 244, 248, 0.84));
       }
 
       body {
         margin: 0;
         min-height: 100vh;
         isolation: isolate;
-        background: #0b1220;
+        background: var(--page-bg);
       }
 
       body::before {
@@ -27,7 +67,7 @@
         inset: 0;
         content: "";
         background-image:
-          linear-gradient(115deg, rgba(5, 12, 22, 0.88), rgba(9, 18, 31, 0.68) 56%, rgba(5, 12, 22, 0.82)),
+          var(--photo-overlay),
           url("https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=2400&q=85");
         background-size: cover;
         background-position: center;
@@ -40,13 +80,43 @@
       }
 
       a {
-        color: #7dd3fc;
+        color: var(--link);
       }
 
       .tool-header {
-        border-bottom: 1px solid #334155;
+        border-bottom: 1px solid var(--border);
         margin-bottom: 1.5rem;
         padding-bottom: 1rem;
+      }
+
+      .tool-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .theme-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.55rem;
+        min-height: 2.6rem;
+        padding: 0.45rem 0.75rem;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        background: var(--card-bg);
+        color: var(--text);
+        white-space: nowrap;
+      }
+
+      .theme-toggle:hover {
+        border-color: var(--accent);
+      }
+
+      .theme-toggle:focus-visible {
+        outline: 2px solid var(--link);
+        outline-offset: 2px;
       }
 
       .tool-header h1 {
@@ -56,14 +126,14 @@
 
       .tool-header p {
         margin: 0;
-        color: #cbd5e1;
+        color: var(--muted);
       }
 
       .panel {
-        border: 1px solid #334155;
+        border: 1px solid var(--border);
         border-radius: 8px;
         padding: 1.25rem;
-        background: rgba(17, 24, 39, 0.91);
+        background: var(--panel-bg);
         backdrop-filter: blur(7px);
       }
 
@@ -78,7 +148,7 @@
       label {
         display: grid;
         gap: 0.4rem;
-        color: #cbd5e1;
+        color: var(--muted);
       }
 
       input,
@@ -92,16 +162,16 @@
       input {
         width: 100%;
         padding: 0.7rem;
-        border: 1px solid #475569;
-        background: #0f172a;
-        color: #f8fafc;
+        border: 1px solid var(--icon-border);
+        background: var(--input-bg);
+        color: var(--input-text);
       }
 
       button {
         padding: 0.7rem 1rem;
         border: 0;
-        background: #f59e0b;
-        color: #111827;
+        background: var(--accent);
+        color: var(--accent-text);
         font-weight: 700;
         cursor: pointer;
       }
@@ -113,7 +183,7 @@
 
       .status {
         min-height: 1.5rem;
-        color: #fbbf24;
+        color: var(--status);
       }
 
       .summary,
@@ -130,13 +200,13 @@
       .stat {
         min-width: 0;
         padding: 1rem;
-        border: 1px solid #334155;
+        border: 1px solid var(--border);
         border-radius: 6px;
       }
 
       .stat strong {
         display: block;
-        color: #f8fafc;
+        color: var(--text);
         font-size: 1.5rem;
       }
 
@@ -185,7 +255,7 @@
       }
 
       .achievement-breakdown-table th {
-        color: #cbd5e1;
+        color: var(--muted);
       }
 
       .achievement-breakdown-table td:first-child {
@@ -206,9 +276,9 @@
       .achievement {
         min-width: 0;
         padding: 1rem;
-        border: 1px solid #334155;
+        border: 1px solid var(--border);
         border-radius: 6px;
-        background: #0f172a;
+        background: var(--card-bg);
       }
 
       .achievement strong {
@@ -228,9 +298,9 @@
         width: 2.75rem;
         aspect-ratio: 1;
         place-items: center;
-        border: 1px solid #475569;
+        border: 1px solid var(--icon-border);
         border-radius: 8px;
-        background: #1e293b;
+        background: var(--icon-bg);
         font-size: 1.45rem;
         line-height: 1;
       }
@@ -245,13 +315,13 @@
       .achievement > span {
         display: block;
         margin-top: 0.35rem;
-        color: #94a3b8;
+        color: var(--subtle);
         font-size: 0.85rem;
       }
 
       .achievement p {
         margin: 0.8rem 0 0.5rem;
-        color: #fbbf24;
+        color: var(--status);
         font-size: 0.9rem;
       }
 
@@ -261,11 +331,11 @@
       }
 
       .achievement.earned {
-        border-color: #22c55e;
+        border-color: var(--earned);
       }
 
       .achievement.earned > span {
-        color: #86efac;
+        color: var(--earned-text);
       }
 
       .achievement.retired {
@@ -285,7 +355,13 @@
   <body>
     <main>
       <header class="tool-header">
-        <p><a id="github-profile-link" href="https://github.com/ranjiGT">GitHub profile</a></p>
+        <div class="tool-header-row">
+          <a id="github-profile-link" href="https://github.com/ranjiGT">GitHub profile</a>
+          <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
+            <span id="theme-icon" aria-hidden="true">☀</span>
+            <span id="theme-label">Light theme</span>
+          </button>
+        </div>
         <h1>GitHub Achievements</h1>
         <p>Look up a profile to see achievement progress and remaining activity.</p>
       </header>
@@ -350,6 +426,9 @@
       const profileStatus = document.getElementById('profile-status');
       const profileLink = document.getElementById('github-profile-link');
       const submit = document.getElementById('profile-submit');
+      const themeToggle = document.getElementById('theme-toggle');
+      const themeIcon = document.getElementById('theme-icon');
+      const themeLabel = document.getElementById('theme-label');
       const achievementStatus = document.getElementById('achievement-status');
       const achievementList = document.getElementById('achievement-list');
       const achievementBreakdown = document.getElementById('achievement-breakdown');
@@ -358,6 +437,33 @@
       let mergedPullRequestCount = null;
       let publicAchievements = null;
       let achievementLoadError = null;
+
+      function setTheme(theme, savePreference = true) {
+        const light = theme === 'light';
+        document.documentElement.dataset.theme = light ? 'light' : 'dark';
+        themeIcon.textContent = light ? '☾' : '☀';
+        themeLabel.textContent = light ? 'Dark theme' : 'Light theme';
+        themeToggle.setAttribute('aria-label', `Switch to ${light ? 'dark' : 'light'} theme`);
+        themeToggle.setAttribute('aria-pressed', String(light));
+
+        if (!savePreference) return;
+        try {
+          localStorage.setItem('achievement-catalog-theme', light ? 'light' : 'dark');
+        } catch {
+          // Theme changes still work when storage is unavailable.
+        }
+      }
+
+      let storedTheme = 'dark';
+      try {
+        storedTheme = localStorage.getItem('achievement-catalog-theme') === 'light' ? 'light' : 'dark';
+      } catch {
+        storedTheme = 'dark';
+      }
+      setTheme(storedTheme, false);
+      themeToggle.addEventListener('click', () => {
+        setTheme(document.documentElement.dataset.theme === 'light' ? 'dark' : 'light');
+      });
 
       async function fetchPublicAchievements(username) {
         const configuredOrigin = document.querySelector('meta[name="achievements-api-origin"]').content.trim();
