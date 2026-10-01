@@ -8,13 +8,28 @@
     <style>
       :root {
         color-scheme: dark;
-        font-family: Inter, system-ui, sans-serif;
+        font-family: "Avenir Next", Avenir, sans-serif;
         background: #0f172a;
         color: #e2e8f0;
       }
 
       body {
         margin: 0;
+        min-height: 100vh;
+        isolation: isolate;
+        background: #0b1220;
+      }
+
+      body::before {
+        position: fixed;
+        z-index: -1;
+        inset: 0;
+        content: "";
+        background-image:
+          linear-gradient(115deg, rgba(5, 12, 22, 0.88), rgba(9, 18, 31, 0.68) 56%, rgba(5, 12, 22, 0.82)),
+          url("https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=2400&q=85");
+        background-size: cover;
+        background-position: center;
       }
 
       main {
@@ -47,7 +62,8 @@
         border: 1px solid #334155;
         border-radius: 8px;
         padding: 1.25rem;
-        background: #111827;
+        background: rgba(17, 24, 39, 0.91);
+        backdrop-filter: blur(7px);
       }
 
       form {
@@ -195,11 +211,30 @@
       }
 
       .achievement strong {
-        display: block;
         overflow-wrap: anywhere;
       }
 
-      .achievement span {
+      .achievement-title {
+        display: grid;
+        grid-template-columns: 2.75rem minmax(0, 1fr);
+        gap: 0.75rem;
+        align-items: center;
+        min-height: 2.75rem;
+      }
+
+      .achievement-icon {
+        display: grid;
+        width: 2.75rem;
+        aspect-ratio: 1;
+        place-items: center;
+        border: 1px solid #475569;
+        border-radius: 8px;
+        background: #1e293b;
+        font-size: 1.45rem;
+        line-height: 1;
+      }
+
+      .achievement > span {
         display: block;
         margin-top: 0.35rem;
         color: #94a3b8;
@@ -221,7 +256,7 @@
         border-color: #22c55e;
       }
 
-      .achievement.earned span {
+      .achievement.earned > span {
         color: #86efac;
       }
 
@@ -323,12 +358,18 @@
         );
         const cards = githubAchievementCatalog.map((achievement, index) => {
           const card = document.createElement('article');
+          const title = document.createElement('div');
+          const icon = document.createElement('span');
           const name = document.createElement('strong');
           const status = document.createElement('span');
           const verifiedLevel = verifiedByName.get(achievement.name.toLowerCase());
           const earned = verifiedByName.has(achievement.name.toLowerCase());
 
           card.className = `achievement${earned ? ' earned' : ''}${achievement.availability === 'retired' ? ' retired' : ''}`;
+          title.className = 'achievement-title';
+          icon.className = 'achievement-icon';
+          icon.textContent = achievement.icon;
+          icon.setAttribute('aria-hidden', 'true');
           name.textContent = achievement.name;
           status.textContent = achievement.availability === 'retired'
             ? 'Retired achievement'
@@ -337,7 +378,8 @@
               : verified
                 ? 'Not shown on public profile'
                 : 'Check profile to verify';
-          card.append(name, status);
+          title.append(icon, name);
+          card.append(title, status);
 
           const definition = achievementProgressDefinitions[achievement.name];
           if (!definition) return card;
@@ -403,12 +445,14 @@
         }
 
         const progress = getAchievementActivityProgress(count, definition.targets);
+        const countUnit = count === 1 ? 'activity' : 'activities';
+        const remainingUnit = progress.remaining === 1 ? 'activity' : 'activities';
         progressText.textContent = progress.nextTarget === null
-          ? `${count.toLocaleString()} activities · Level ${progress.level}, highest listed level.`
-          : `${count.toLocaleString()} activities · ${progress.remaining.toLocaleString()} more to level ${progress.level + 1} (${progress.nextTarget.toLocaleString()} total).`;
+          ? `${count.toLocaleString()} ${countUnit} · Level ${progress.level}, highest listed level.`
+          : `${count.toLocaleString()} ${countUnit} · ${progress.remaining.toLocaleString()} more ${remainingUnit} to level ${progress.level + 1} (${progress.nextTarget.toLocaleString()} total).`;
         progressBar.value = progress.progressPercent;
         progressBar.hidden = false;
-        progressBar.setAttribute('aria-label', `${achievementName}: ${progress.remaining} more activities to next level`);
+        progressBar.setAttribute('aria-label', `${achievementName}: ${progress.remaining} more ${remainingUnit} to next level`);
       }
 
       function renderAchievementBreakdown() {
