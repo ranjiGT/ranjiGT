@@ -22,6 +22,7 @@ test('lists current and retired GitHub achievement types', () => {
   assert.equal(availableAchievements.length, 8);
   assert.equal(githubAchievementCatalog.filter(({ availability }) => availability === 'retired').length, 2);
   assert.equal(Object.keys(achievementProgressDefinitions).length, 8);
+  assert.ok(githubAchievementCatalog.every(({ icon }) => icon));
   assert.ok(availableAchievements.every(({ name }) => achievementProgressDefinitions[name]));
 });
 

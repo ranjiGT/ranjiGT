@@ -1,14 +1,14 @@
 export const githubAchievementCatalog = [
-  { name: 'Pair Extraordinaire', availability: 'available' },
-  { name: 'Galaxy Brain', availability: 'available' },
-  { name: 'Public Sponsor', availability: 'available' },
-  { name: 'Heart On Your Sleeve', availability: 'available' },
-  { name: 'Quickdraw', availability: 'available' },
-  { name: 'Pull Shark', availability: 'available' },
-  { name: 'YOLO', availability: 'available' },
-  { name: 'Starstruck', availability: 'available' },
-  { name: 'Arctic Code Vault Contributor', availability: 'retired' },
-  { name: 'Mars 2020 Contributor', availability: 'retired' }
+  { name: 'Pair Extraordinaire', icon: '🤝', availability: 'available' },
+  { name: 'Galaxy Brain', icon: '🧠', availability: 'available' },
+  { name: 'Public Sponsor', icon: '💖', availability: 'available' },
+  { name: 'Heart On Your Sleeve', icon: '❤️', availability: 'available' },
+  { name: 'Quickdraw', icon: '⚡', availability: 'available' },
+  { name: 'Pull Shark', icon: '🦈', availability: 'available' },
+  { name: 'YOLO', icon: '🚀', availability: 'available' },
+  { name: 'Starstruck', icon: '⭐', availability: 'available' },
+  { name: 'Arctic Code Vault Contributor', icon: '❄️', availability: 'retired' },
+  { name: 'Mars 2020 Contributor', icon: '🪐', availability: 'retired' }
 ];
 
 export const achievementProgressDefinitions = {
