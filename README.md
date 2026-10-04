@@ -19,6 +19,7 @@
 
 <p align="center">
   <a href="#about">About</a> ·
+  <a href="#certifications">Certifications</a> ·
   <a href="#recent-lessons">Videos</a> ·
   <a href="#toolbox">Toolbox</a> ·
   <a href="#open-source">Open source</a> ·
@@ -41,6 +42,22 @@ I have 6+ years in automation engineering and create practical learning content 
   <a href="https://www.youtube.com/c/RanjiRaj18?sub_confirmation=1"><img alt="YouTube subscribers" src="https://custom-icon-badges.demolab.com/youtube/channel/subscribers/UCl1Tqc3U-TAOjuh4izHLsUw?color=%23E05D44&label=subscribers&logo=video&logoColor=white&style=flat-square&labelColor=CE4630"/></a>
   <a href="https://github.com/ranjiGT?tab=followers"><img alt="GitHub followers" src="https://custom-icon-badges.demolab.com/github/followers/ranjiGT?color=236ad3&label=followers&logo=person-add&logoColor=white&style=flat-square&labelColor=1155ba"/></a>
   <a href="https://github.com/ranjiGT?tab=repositories&sort=stargazers"><img alt="GitHub stars" src="https://custom-icon-badges.demolab.com/github/stars/ranjiGT?color=55960c&label=stars&logo=star&style=flat-square&labelColor=488207"/></a>
+</p>
+
+## Certifications
+
+<p align="center">
+  <a href="https://learn.microsoft.com/en-us/credentials/certifications/github-copilot/">
+    <img src="https://learn.microsoft.com/en-us/media/learn/certification/badges/github-copilot.svg" width="120" alt="Microsoft Certified: GitHub Copilot"/>
+  </a>
+</p>
+
+<p align="center">
+  <strong>GitHub Copilot (GH-300)</strong><br/>
+  Earned 3 August 2026 · Expires 4 August 2028<br/>
+  Credential ID: <code>D31588F9563F3F39</code><br/>
+  Certification number: <code>A36Y6D-141E37</code><br/>
+  <a href="https://learn.microsoft.com/en-us/credentials/certifications/github-copilot/">Certification details on Microsoft Learn</a>
 </p>
 
 ## Recent Lessons
