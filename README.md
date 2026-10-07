@@ -34,6 +34,9 @@
 > **Ran** rhymes with **run**; **ji** is pronounced like the letter **G**.
 
 I have 6+ years in automation engineering and create practical learning content on data science, deep learning, and applied AI. I’m currently exploring neural networks, LLMs, and MLOps.
+I’m part of the team at Lufthansa Systems, within Lufthansa Group, working on
+GitHub solutions. Senior product owners from Lufthansa Systems and Lufthansa
+Group discussed this work at the Developer Conference on June 11, 2026.
 
 **Ask me about:** Python, deep learning, ML pipelines, and data visualization.<br/>
 **Fun fact:** I can explain backpropagation to a 10-year-old.
