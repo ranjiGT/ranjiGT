@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="achievements-api-origin" content="https://ranjigt-github-achievement-catalog.vercel.app" />
+    <meta name="description" content="Browse GitHub achievement types and analyze merged pull requests by year and repository." />
+    <title>GitHub Achievements and Pull Shark Analyzer</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family: "Avenir Next", Avenir, sans-serif;
+        --page-bg: #0b1220;
+        --panel-bg: rgba(17, 24, 39, 0.91);
+        --text: #e2e8f0;
+        --muted: #cbd5e1;
+        --subtle: #94a3b8;
+        --border: #334155;
+        --input-bg: #0f172a;
+        --input-text: #f8fafc;
+        --accent: #f59e0b;
+        --accent-text: #111827;
+        --status: #fbbf24;
+        --card-bg: #0f172a;
+        --icon-bg: #1e293b;
+        --icon-border: #475569;
+        --earned: #22c55e;
+        --earned-text: #86efac;
+        --link: #7dd3fc;
+        --photo-overlay: linear-gradient(115deg, rgba(5, 12, 22, 0.88), rgba(9, 18, 31, 0.68) 56%, rgba(5, 12, 22, 0.82));
+        background: var(--page-bg);
+        color: var(--text);
+      }
+
+      :root[data-theme="light"] {
+        color-scheme: light;
+        --page-bg: #edf2f6;
+        --panel-bg: rgba(255, 255, 255, 0.92);
+        --text: #18232e;
+        --muted: #445566;
+        --subtle: #5c6d7c;
+        --border: #c6d2dc;
+        --input-bg: #ffffff;
+        --input-text: #18232e;
+        --accent: #d97706;
+        --accent-text: #ffffff;
+        --status: #8a4b00;
+        --card-bg: #f8fafc;
+        --icon-bg: #fff4dc;
+        --icon-border: #d8bd86;
+        --earned: #16804a;
+        --earned-text: #17633d;
+        --link: #075985;
+        --photo-overlay: linear-gradient(115deg, rgba(238, 244, 248, 0.88), rgba(244, 247, 249, 0.72) 56%, rgba(238, 244, 248, 0.84));
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        isolation: isolate;
+        background: var(--page-bg);
+      }
+
+      body::before {
+        position: fixed;
+        z-index: -1;
+        inset: 0;
+        content: "";
+        background-image:
+          var(--photo-overlay),
+          url("https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=2400&q=85");
+        background-size: cover;
+        background-position: center;
+      }
+
+      main {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 2rem 1rem 3rem;
+      }
+
+      a {
+        color: var(--link);
+      }
+
+      .tool-header {
+        border-bottom: 1px solid var(--border);
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+      }
+
+      .tool-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .theme-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.75rem;
+        min-height: 2.6rem;
+        padding: 0;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        background: var(--card-bg);
+        color: var(--text);
+        font-size: 1.3rem;
+        line-height: 1;
+      }
+
+      .theme-toggle:hover {
+        border-color: var(--accent);
+      }
+
+      .theme-toggle:focus-visible {
+        outline: 2px solid var(--link);
+        outline-offset: 2px;
+      }
+
+      .tool-header h1 {
+        margin: 0 0 0.5rem;
+        font-size: 1.8rem;
+      }
+
+      .tool-header p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .panel {
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 1.25rem;
+        background: var(--panel-bg);
+        backdrop-filter: blur(7px);
+      }
+
+      form {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: end;
+        gap: 0.8rem;
+        margin-top: 1rem;
+      }
+
+      label {
+        display: grid;
+        gap: 0.4rem;
+        color: var(--muted);
+      }
+
+      input,
+      button {
+        min-height: 2.8rem;
+        box-sizing: border-box;
+        border-radius: 6px;
+        font: inherit;
+      }
+
+      input {
+        width: 100%;
+        padding: 0.7rem;
+        border: 1px solid var(--icon-border);
+        background: var(--input-bg);
+        color: var(--input-text);
+      }
+
+      button {
+        padding: 0.7rem 1rem;
+        border: 0;
+        background: var(--accent);
+        color: var(--accent-text);
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      button:disabled {
+        cursor: wait;
+        opacity: 0.65;
+      }
+
+      .status {
+        min-height: 1.5rem;
+        color: var(--status);
+      }
+
+      .summary,
+      .breakdowns {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .breakdowns {
+        margin-top: 1.25rem;
+      }
+
+      .stat {
+        min-width: 0;
+        padding: 1rem;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+      }
+
+      .stat strong {
+        display: block;
+        color: var(--text);
+        font-size: 1.5rem;
+      }
+
+      progress {
+        width: 100%;
+        height: 0.7rem;
+        accent-color: #f59e0b;
+      }
+
+      .breakdown h2 {
+        margin: 0 0 0.6rem;
+        font-size: 1rem;
+      }
+
+      .breakdown ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .breakdown li {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 0.55rem 0;
+        border-bottom: 1px solid #334155;
+        overflow-wrap: anywhere;
+      }
+
+      .achievement-breakdown-wrap {
+        margin-top: 1.5rem;
+        overflow-x: auto;
+      }
+
+      .achievement-breakdown-table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+      }
+
+      .achievement-breakdown-table th,
+      .achievement-breakdown-table td {
+        padding: 0.7rem;
+        border-bottom: 1px solid #334155;
+        vertical-align: top;
+      }
+
+      .achievement-breakdown-table th {
+        color: var(--muted);
+      }
+
+      .achievement-breakdown-table td:first-child {
+        font-weight: 700;
+      }
+
+      .note {
+        color: #94a3b8;
+        font-size: 0.9rem;
+      }
+
+      .achievement-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.8rem;
+      }
+
+      .achievement {
+        min-width: 0;
+        padding: 1rem;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        background: var(--card-bg);
+      }
+
+      .achievement strong {
+        overflow-wrap: anywhere;
+      }
+
+      .achievement-title {
+        display: grid;
+        grid-template-columns: 2.75rem minmax(0, 1fr);
+        gap: 0.75rem;
+        align-items: center;
+        min-height: 2.75rem;
+      }
+
+      .achievement-icon {
+        display: grid;
+        width: 2.75rem;
+        aspect-ratio: 1;
+        place-items: center;
+        border: 1px solid var(--icon-border);
+        border-radius: 8px;
+        background: var(--icon-bg);
+        font-size: 1.45rem;
+        line-height: 1;
+      }
+
+      .achievement-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 8px;
+      }
+
+      .achievement > span {
+        display: block;
+        margin-top: 0.35rem;
+        color: var(--subtle);
+        font-size: 0.85rem;
+      }
+
+      .achievement p {
+        margin: 0.8rem 0 0.5rem;
+        color: var(--status);
+        font-size: 0.9rem;
+      }
+
+      .achievement label {
+        margin-top: 0.75rem;
+        font-size: 0.9rem;
+      }
+
+      .achievement.earned {
+        border-color: var(--earned);
+      }
+
+      .achievement.earned > span {
+        color: var(--earned-text);
+      }
+
+      .achievement.retired {
+        opacity: 0.72;
+      }
+
+      @media (max-width: 600px) {
+        form,
+        .summary,
+        .breakdowns,
+        .achievement-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header class="tool-header">
+        <div class="tool-header-row">
+          <a id="github-profile-link" href="https://github.com/ranjiGT">GitHub profile</a>
+          <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch to light theme" aria-pressed="false">
+            <span id="theme-icon" aria-hidden="true">☀</span>
+          </button>
+        </div>
+        <h1>GitHub Achievements</h1>
+        <p>Look up a profile to see achievement progress and remaining activity.</p>
+      </header>
+
+      <section class="panel" aria-labelledby="profile-heading">
+        <h2 id="profile-heading">GitHub username</h2>
+        <form id="profile-form">
+          <label for="github-username">
+            Username
+            <input id="github-username" name="username" value="ranjiGT" autocomplete="username" required />
+          </label>
+          <button id="profile-submit" type="submit">Show achievements</button>
+        </form>
+        <p id="profile-status" class="status" role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="panel" aria-labelledby="achievements-heading">
+        <h2 id="achievements-heading">Achievement catalog</h2>
+        <p id="achievement-status" class="status" role="status" aria-live="polite"></p>
+        <div id="achievement-list" class="achievement-grid"></div>
+        <div class="achievement-breakdown-wrap">
+          <h3>Achievement activity breakdown</h3>
+          <table class="achievement-breakdown-table">
+            <thead>
+              <tr>
+                <th scope="col">Achievement</th>
+                <th scope="col">Qualifying activity</th>
+                <th scope="col">Count</th>
+                <th scope="col">Level</th>
+                <th scope="col">Next level</th>
+                <th scope="col">Remaining</th>
+              </tr>
+            </thead>
+            <tbody id="achievement-breakdown"></tbody>
+          </table>
+        </div>
+        <p class="note">Earned badges are parsed server-side from public GitHub profiles. Pull Shark counts are fetched automatically; enter qualifying activity counts manually for other achievements.</p>
+      </section>
+
+      <section class="panel" aria-labelledby="lookup-heading">
+        <h2 id="lookup-heading">Merged pull request breakdown</h2>
+        <p id="pull-shark-status" class="status" role="status" aria-live="polite"></p>
+        <div id="pull-shark-results"></div>
+        <p class="note">Milestone thresholds are community-reported estimates, not an official GitHub guarantee. GitHub Search exposes at most 1,000 matching PRs for breakdowns.</p>
+      </section>
+    </main>
+
+    <script type="module">
+      import {
+        achievementProgressDefinitions,
+        getAchievementActivityProgress,
+        getAchievementBreakdown,
+        getInitialActivityCounts,
+        githubAchievementCatalog,
+      } from './src/achievements.js';
+      import { fetchMergedPullRequests, getPullSharkProgress } from './src/pull-shark.js';
+
+      const form = document.getElementById('profile-form');
+      const usernameInput = document.getElementById('github-username');
+      const status = document.getElementById('pull-shark-status');
+      const results = document.getElementById('pull-shark-results');
+      const profileStatus = document.getElementById('profile-status');
+      const profileLink = document.getElementById('github-profile-link');
+      const submit = document.getElementById('profile-submit');
+      const themeToggle = document.getElementById('theme-toggle');
+      const themeIcon = document.getElementById('theme-icon');
+      const achievementStatus = document.getElementById('achievement-status');
+      const achievementList = document.getElementById('achievement-list');
+      const achievementBreakdown = document.getElementById('achievement-breakdown');
+      let activeUsername = usernameInput.value.trim();
+      let activityCounts = getInitialActivityCounts();
+      let mergedPullRequestCount = null;
+      let publicAchievements = null;
+      let achievementLoadError = null;
+
+      function setTheme(theme, savePreference = true) {
+        const light = theme === 'light';
+        document.documentElement.dataset.theme = light ? 'light' : 'dark';
+        themeIcon.textContent = light ? '☾' : '☀';
+        themeToggle.setAttribute('aria-label', `Switch to ${light ? 'dark' : 'light'} theme`);
+        themeToggle.title = `Switch to ${light ? 'dark' : 'light'} theme`;
+        themeToggle.setAttribute('aria-pressed', String(light));
+
+        if (!savePreference) return;
+        try {
+          localStorage.setItem('achievement-catalog-theme', light ? 'light' : 'dark');
+        } catch {
+          // Theme changes still work when storage is unavailable.
+        }
+      }
+
+      let storedTheme = 'dark';
+      try {
+        storedTheme = localStorage.getItem('achievement-catalog-theme') === 'light' ? 'light' : 'dark';
+      } catch {
+        storedTheme = 'dark';
+      }
+      setTheme(storedTheme, false);
+      themeToggle.addEventListener('click', () => {
+        setTheme(document.documentElement.dataset.theme === 'light' ? 'dark' : 'light');
+      });
+
+      async function fetchPublicAchievements(username) {
+        const configuredOrigin = document.querySelector('meta[name="achievements-api-origin"]').content.trim();
+        const apiOrigin = configuredOrigin || window.location.origin;
+        const endpoint = new URL('/api/achievements', apiOrigin);
+        endpoint.searchParams.set('username', username);
+        const response = await fetch(endpoint);
+        if (!response.headers.get('content-type')?.includes('application/json')) {
+          throw new Error('Achievement service is not connected. Deploy the API to Vercel and set its origin in this page configuration.');
+        }
+        const data = await response.json();
+
+        if (!response.ok) throw new Error(data.error || 'Could not load GitHub achievements.');
+        return data;
+      }
+
+      function seedActivityCounts(achievements) {
+        activityCounts = getInitialActivityCounts(achievements);
+      }
+
+      function renderAchievements(username) {
+        profileLink.href = `https://github.com/${encodeURIComponent(username)}`;
+        const verifiedByName = new Map((publicAchievements ?? []).map((achievement) => [achievement.name.toLowerCase(), achievement]));
+        const cards = githubAchievementCatalog.map((achievement, index) => {
+          const card = document.createElement('article');
+          const title = document.createElement('div');
+          const icon = document.createElement('span');
+          const name = document.createElement('strong');
+          const status = document.createElement('span');
+          const badge = verifiedByName.get(achievement.name.toLowerCase());
+          const earned = Boolean(badge);
+
+          card.className = `achievement${earned ? ' earned' : ''}${achievement.availability === 'retired' ? ' retired' : ''}`;
+          title.className = 'achievement-title';
+          icon.className = 'achievement-icon';
+          icon.textContent = achievement.icon;
+          icon.setAttribute('aria-hidden', 'true');
+          name.textContent = achievement.name;
+          status.textContent = achievement.availability === 'retired'
+            ? 'Retired achievement'
+            : earned
+              ? `Earned by @${username}${badge.level ? ` · level ${badge.level}` : ''}${badge.tier ? ` · ${badge.tier} tier` : ''}`
+              : achievement.availability === 'internal'
+                ? 'Internal achievement · not generally earnable'
+              : publicAchievements !== null
+                ? 'Not listed on public profile'
+                : achievementLoadError
+                  ? 'Could not verify from public profile'
+                  : 'Loading public profile';
+          if (badge?.imageUrl) {
+            const badgeImage = document.createElement('img');
+            badgeImage.src = badge.imageUrl;
+            badgeImage.alt = '';
+            icon.replaceChildren(badgeImage);
+          }
+          title.append(icon, name);
+          card.append(title, status);
+
+          const definition = achievementProgressDefinitions[achievement.name];
+          if (!definition) return card;
+
+          const metric = document.createElement('span');
+          const progressText = document.createElement('p');
+          const progressBar = document.createElement('progress');
+          metric.textContent = definition.metric;
+          progressText.className = 'achievement-progress-text';
+          progressBar.max = 100;
+          progressBar.setAttribute('aria-label', `${achievement.name} progress to next level`);
+          card.append(metric, progressText, progressBar);
+
+          if (definition.source === 'github') {
+            updateAchievementProgress(card, achievement.name, mergedPullRequestCount);
+          } else {
+            const label = document.createElement('label');
+            const input = document.createElement('input');
+            label.htmlFor = `achievement-count-${index}`;
+            label.append(document.createTextNode('Current activity count'));
+            input.id = label.htmlFor;
+            input.type = 'number';
+            input.min = '0';
+            input.step = '1';
+            input.inputMode = 'numeric';
+            input.value = String(activityCounts[achievement.name] ?? 0);
+            input.addEventListener('input', () => {
+              activityCounts[achievement.name] = Number(input.value) || 0;
+              updateAchievementProgress(card, achievement.name, activityCounts[achievement.name]);
+              renderAchievementBreakdown();
+            });
+            label.append(input);
+            card.append(label);
+            updateAchievementProgress(card, achievement.name, activityCounts[achievement.name] ?? 0);
+          }
+
+          return card;
+        });
+
+        achievementList.replaceChildren(...cards);
+        const achievementsLink = document.createElement('a');
+        achievementsLink.href = `https://github.com/${encodeURIComponent(username)}?tab=achievements`;
+        achievementsLink.target = '_blank';
+        achievementsLink.rel = 'noreferrer';
+        achievementsLink.textContent = `View @${username}'s official achievements`;
+        achievementStatus.replaceChildren(
+          document.createTextNode(publicAchievements !== null
+            ? `${publicAchievements.length} publicly visible achievements for @${username}. `
+            : achievementLoadError
+              ? `${achievementLoadError} `
+              : `Loading public achievements for @${username}. `),
+          achievementsLink
+        );
+      }
+
+      function updateAchievementProgress(card, achievementName, count) {
+        const definition = achievementProgressDefinitions[achievementName];
+        const progressText = card.querySelector('.achievement-progress-text');
+        const progressBar = card.querySelector('progress');
+
+        if (count === null) {
+          progressText.textContent = 'Submit username to fetch merged PR count.';
+          progressBar.hidden = true;
+          return;
+        }
+
+        const progress = getAchievementActivityProgress(count, definition.targets);
+        const countUnit = count === 1 ? 'activity' : 'activities';
+        const remainingUnit = progress.remaining === 1 ? 'activity' : 'activities';
+        progressText.textContent = progress.nextTarget === null
+          ? `${count.toLocaleString()} ${countUnit} · Level ${progress.level}, highest listed level.`
+          : `${count.toLocaleString()} ${countUnit} · ${progress.remaining.toLocaleString()} more ${remainingUnit} to level ${progress.level + 1} (${progress.nextTarget.toLocaleString()} total).`;
+        progressBar.value = progress.progressPercent;
+        progressBar.hidden = false;
+        progressBar.setAttribute('aria-label', `${achievementName}: ${progress.remaining} more ${remainingUnit} to next level`);
+      }
+
+      function renderAchievementBreakdown() {
+        const rows = getAchievementBreakdown(activityCounts, mergedPullRequestCount).map((item) => {
+          const row = document.createElement('tr');
+          const values = [
+            item.name,
+            item.metric,
+            item.count === null ? 'Run username lookup' : item.count.toLocaleString(),
+            item.level === null ? '—' : item.level,
+            item.nextLevel === null ? '—' : item.nextLevel,
+            item.remaining === null
+              ? '—'
+              : item.nextLevel === null
+                ? 'Highest listed level'
+                : item.remaining.toLocaleString()
+          ];
+
+          for (const value of values) {
+            const cell = document.createElement('td');
+            cell.textContent = value;
+            row.append(cell);
+          }
+
+          return row;
+        });
+
+        achievementBreakdown.replaceChildren(...rows);
+      }
+
+      renderAchievements(activeUsername);
+      renderAchievementBreakdown();
+
+      function createBreakdown(title, entries, labelForEntry) {
+        const section = document.createElement('section');
+        const heading = document.createElement('h2');
+        const list = document.createElement('ul');
+        section.className = 'breakdown';
+        heading.textContent = title;
+        section.append(heading, list);
+
+        if (!entries.length) {
+          const empty = document.createElement('li');
+          empty.textContent = 'No data found.';
+          list.append(empty);
+          return section;
+        }
+
+        for (const entry of entries) {
+          const row = document.createElement('li');
+          const label = document.createElement('span');
+          const count = document.createElement('strong');
+          label.textContent = labelForEntry(entry);
+          count.textContent = entry.count.toLocaleString();
+          row.append(label, count);
+          list.append(row);
+        }
+
+        return section;
+      }
+
+      function renderResults(username, report) {
+        const progress = getPullSharkProgress(report.totalCount);
+        const summary = document.createElement('div');
+        const totalCard = document.createElement('div');
+        const milestoneCard = document.createElement('div');
+        const total = document.createElement('strong');
+        const milestone = document.createElement('strong');
+        const progressText = document.createElement('p');
+        const progressBar = document.createElement('progress');
+        const breakdowns = document.createElement('div');
+
+        summary.className = 'summary';
+        totalCard.className = 'stat';
+        milestoneCard.className = 'stat';
+        total.textContent = report.totalCount.toLocaleString();
+        milestone.textContent = progress.currentMilestone
+          ? `Level ${[2, 16, 128, 1024].indexOf(progress.currentMilestone) + 1}`
+          : 'Not unlocked';
+        totalCard.append(total, document.createTextNode(' merged pull requests'));
+        progressText.textContent = progress.nextMilestone
+          ? `${(progress.nextMilestone - report.totalCount).toLocaleString()} more to the next reported milestone (${progress.nextMilestone.toLocaleString()}).`
+          : 'You have passed the highest commonly reported milestone.';
+        progressBar.max = 100;
+        progressBar.value = progress.progressPercent;
+        progressBar.setAttribute('aria-label', 'Progress to next reported Pull Shark milestone');
+        milestoneCard.append(milestone, progressText, progressBar);
+        summary.append(totalCard, milestoneCard);
+
+        breakdowns.className = 'breakdowns';
+        breakdowns.append(
+          createBreakdown('By year', report.byYear, (entry) => entry.year),
+          createBreakdown('Top repositories', report.byRepository.slice(0, 10), (entry) => entry.repository)
+        );
+        results.replaceChildren(summary, breakdowns);
+        status.textContent = `Results for @${username}.`;
+
+        if (report.truncated) {
+          status.textContent += ' The breakdown is limited to the first 1,000 search results.';
+        }
+      }
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const username = usernameInput.value.trim();
+        if (!/^[A-Za-z0-9](?:[A-Za-z0-9-]{0,37}[A-Za-z0-9])?$/.test(username)) {
+          profileStatus.textContent = 'Enter a valid GitHub username.';
+          return;
+        }
+
+        if (username.toLowerCase() !== activeUsername.toLowerCase()) {
+          activeUsername = username;
+          activityCounts = getInitialActivityCounts();
+        }
+
+        submit.disabled = true;
+        status.textContent = `Searching GitHub for merged pull requests by @${username}...`;
+        profileStatus.textContent = `Loading @${username}'s public profile and achievement data...`;
+        results.replaceChildren();
+        mergedPullRequestCount = null;
+        publicAchievements = null;
+        achievementLoadError = null;
+        renderAchievements(username);
+        renderAchievementBreakdown();
+
+        try {
+          const [achievementResult, pullRequestResult] = await Promise.allSettled([
+            fetchPublicAchievements(username),
+            fetchMergedPullRequests(username)
+          ]);
+
+          if (achievementResult.status === 'fulfilled') {
+            publicAchievements = achievementResult.value.achievements;
+            seedActivityCounts(publicAchievements);
+          } else {
+            achievementLoadError = achievementResult.reason.message;
+          }
+
+          renderAchievements(username);
+          renderAchievementBreakdown();
+          if (pullRequestResult.status === 'fulfilled') {
+            mergedPullRequestCount = pullRequestResult.value.totalCount;
+            renderAchievements(username);
+            renderAchievementBreakdown();
+            renderResults(username, pullRequestResult.value);
+          } else {
+            status.textContent = pullRequestResult.reason.message;
+          }
+
+          profileStatus.textContent = achievementResult.status === 'fulfilled'
+            ? `Achievement data loaded for @${username}.`
+            : `Could not load @${username}'s achievement data.`;
+        } finally {
+          submit.disabled = false;
+        }
+      });
+
+      form.requestSubmit();
+    </script>
+  </body>
+</html>

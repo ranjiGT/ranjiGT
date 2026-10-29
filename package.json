@@ -1,0 +1,14 @@
+{
+  "name": "pull-shark-pr-analyzer",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "dependencies": {
+    "cheerio": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
