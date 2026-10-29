@@ -268,51 +268,11 @@ Run `npm install` and `npm test` for parser checks. For a complete frontend and 
 
 ## GitHub activity
 
-<details>
-<summary>Repository statistics and contribution visuals</summary>
-
-<p align="center">
-  <a href="https://github.com/anuraghazra/github-readme-stats">
-    <img alt="Ranji Raj's Github Stats" src="https://github-readme-stats.vercel.app/api/?username=ranjiGT&show_icons=true&include_all_commits=true&theme=react&hide_border=true&bg_color=1F222E&title_color=F85D7F&icon_color=F8D866" height="192px"/>
-  </a>
-  <a href="https://github.com/anuraghazra/github-readme-stats">
-    <img alt="Ranji Raj's Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ranjiGT&langs_count=8&layout=compact&theme=react&hide_border=true&bg_color=1F222E&title_color=F85D7F&icon_color=F8D866" height="192px"/>
-  </a>
-</p>
-
-### Contribution streak
-
-<p align="center">
-  <a href="https://git.io/streak-stats">
-    <img alt="Ranji Raj's streak" src="https://streak-stats.demolab.com/?user=ranjiGT&theme=react&hide_border=true&background=1F222E&ring=F85D7F&fire=F85D7F&currStreakLabel=F85D7F"/>
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/ashutosh00710/github-readme-activity-graph">
-    <img alt="Ranji Raj's Activity Graph" src="https://github-readme-activity-graph.vercel.app/graph/?username=ranjiGT&bg_color=1F222E&color=F8D866&line=F85D7F&point=FFFFFF&hide_border=true"/>
-  </a>
-</p>
-
-### Commit history
-
 <p align="center">
   <a href="https://commit-history.com/ranjiGT">
     <img alt="Ranji Raj's cumulative commit history" src="https://commit-history.com/embed/ranjiGT" width="720"/>
   </a>
 </p>
-
-### Contribution snake
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ranjiGT/ranjiGT/output/github-contribution-grid-snake-dark.svg"/>
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ranjiGT/ranjiGT/output/github-contribution-grid-snake.svg"/>
-    <img alt="GitHub contribution snake animation" src="https://raw.githubusercontent.com/ranjiGT/ranjiGT/output/github-contribution-grid-snake.svg"/>
-  </picture>
-</p>
-
-</details>
 
 ---
 
