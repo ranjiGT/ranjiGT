@@ -19,6 +19,7 @@
 
 <p align="center">
   <a href="#about">About</a> ·
+  <a href="#github-in-the-real-world">GitHub in the real world</a> ·
   <a href="#certifications">Certifications</a> ·
   <a href="#recent-lessons">Videos</a> ·
   <a href="#toolbox">Toolbox</a> ·
@@ -46,6 +47,23 @@ Group discussed this work at the Developer Conference on June 11, 2026.
   <a href="https://github.com/ranjiGT?tab=followers"><img alt="GitHub followers" src="https://custom-icon-badges.demolab.com/github/followers/ranjiGT?color=236ad3&label=followers&logo=person-add&logoColor=white&style=flat-square&labelColor=1155ba"/></a>
   <a href="https://github.com/ranjiGT?tab=repositories&sort=stargazers"><img alt="GitHub stars" src="https://custom-icon-badges.demolab.com/github/stars/ranjiGT?color=55960c&label=stars&logo=star&style=flat-square&labelColor=488207"/></a>
 </p>
+
+## GitHub in the real world
+
+My GitHub profile, brought to life on a tiny handheld display.
+
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <img src="./github-device-in-action.jpeg" alt="GitHub handheld showing Ranji Raj's profile stats on a desk" width="100%"/>
+      <br/><sub><strong>The full setup</strong> · my profile on the handheld</sub>
+    </td>
+    <td width="50%" align="center">
+      <img src="./github-device-closeup.jpeg" alt="Close-up of the handheld screen displaying Ranji Raj's GitHub profile stats" width="100%"/>
+      <br/><sub><strong>Up close</strong> · followers, contributions, and repositories</sub>
+    </td>
+  </tr>
+</table>
 
 ## Certifications
 
