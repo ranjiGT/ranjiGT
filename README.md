@@ -23,13 +23,23 @@
 
 > **`Ran`** is pronounced like **RUN**, **`ji`** is pronounced like English alphabet **G**
 
-- 🎓 M.Sc. in Data Science from Germany
-- 🤖 6+ years of experience in Automation Engineering
-- 🎬 Passionate about teaching Data Science & Deep Learning on YouTube
-- 🔭 Currently building educational content on Neural Networks & LLMs
-- 🌱 Always exploring the intersection of MLOps and applied AI
-- 💬 Ask me about **Python**, **Deep Learning**, **ML pipelines**, or **Data Viz**
-- ⚡ Fun fact: I can explain backpropagation to a 10-year-old
+<table>
+  <tr>
+    <td width="34%" align="center">
+      <img src="./profile-avatar.jpg" alt="Ranji Raj by the sea" width="240" />
+    </td>
+    <td width="66%">
+      <h3>Hi, I'm Ranji Raj 👋</h3>
+      <p>Data scientist, automation engineer, and educator who enjoys making AI and data science practical and approachable.</p>
+      <p>🎓 M.Sc. in Data Science · 🤖 6+ years in Automation Engineering<br>
+      🎬 Teaching Data Science & Deep Learning on YouTube<br>
+      ✈️ Building GitHub solutions with the team at Lufthansa Systems. Our work was discussed by senior product owners from Lufthansa Systems and Lufthansa Group at the June 11, 2026 Developer Conference.</p>
+      <p>🌱 Exploring MLOps and applied AI<br>
+      💬 Ask me about Python, Deep Learning, ML pipelines, or Data Viz<br>
+      ⚡ I can explain backpropagation to a 10-year-old</p>
+    </td>
+  </tr>
+</table>
 
 <!-- Social badges section -->
 <p align="center">
