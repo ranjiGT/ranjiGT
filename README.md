@@ -294,6 +294,14 @@ Run `npm install` and `npm test` for parser checks. For a complete frontend and 
   </a>
 </p>
 
+### Commit history
+
+<p align="center">
+  <a href="https://commit-history.com/ranjiGT">
+    <img alt="Ranji Raj's cumulative commit history" src="https://commit-history.com/embed/ranjiGT" width="720"/>
+  </a>
+</p>
+
 ### Contribution snake
 
 <p align="center">
