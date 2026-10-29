@@ -50,17 +50,17 @@ Group discussed this work at the Developer Conference on June 11, 2026.
 
 ## GitHub in the real world
 
-My GitHub profile, brought to life on a tiny handheld display.
+My GitHub Universe Conference badge from 2025, customized to display my GitHub profile stats.
 
 <table>
   <tr>
     <td width="50%" align="center">
-      <img src="./github-device-in-action.jpeg" alt="GitHub handheld showing Ranji Raj's profile stats on a desk" width="100%"/>
-      <br/><sub><strong>The full setup</strong> · my profile on the handheld</sub>
+      <img src="./github-device-in-action.jpeg" alt="GitHub Universe Conference 2025 badge displaying Ranji Raj's profile stats on a desk" width="100%"/>
+      <br/><sub><strong>The badge</strong> · my GitHub Universe 2025 keepsake</sub>
     </td>
     <td width="50%" align="center">
-      <img src="./github-device-closeup.jpeg" alt="Close-up of the handheld screen displaying Ranji Raj's GitHub profile stats" width="100%"/>
-      <br/><sub><strong>Up close</strong> · followers, contributions, and repositories</sub>
+      <img src="./github-device-closeup.jpeg" alt="Close-up of the GitHub Universe Conference 2025 badge displaying Ranji Raj's profile stats" width="100%"/>
+      <br/><sub><strong>Up close</strong> · profile stats on the badge display</sub>
     </td>
   </tr>
 </table>
