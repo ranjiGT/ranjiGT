@@ -1,7 +1,3 @@
-<p align="center">
-  <a href="https://github.com/ranjiGT"><img src="https://avatars.githubusercontent.com/u/64376506?v=4" width="112" height="112" alt="Ranji Raj's GitHub avatar"/></a>
-</p>
-
 <h1 align="center">Ranji Raj</h1>
 
 <p align="center">
