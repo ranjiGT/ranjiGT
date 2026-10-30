@@ -48,10 +48,6 @@ Group discussed this work at the Developer Conference on June 11, 2026.
 
 ## GitHub in the real world
 
-<p align="center">
-  <img src="./github-contribution-history.png" alt="Ranji Raj's GitHub contribution history from 2020 to 2026, showing 1,824 contributions" width="100%" />
-</p>
-
 My GitHub Universe Conference badge from 2025, customized to display my GitHub profile stats.
 
 <table>
