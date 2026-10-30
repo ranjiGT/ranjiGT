@@ -63,6 +63,14 @@ My GitHub Universe Conference badge from 2025, customized to display my GitHub p
   </tr>
 </table>
 
+## GitHub activity
+
+<p align="center">
+  <a href="https://commit-history.com/ranjiGT">
+    <img alt="Ranji Raj's cumulative commit history" src="https://commit-history.com/embed/ranjiGT" width="720"/>
+  </a>
+</p>
+
 ## Certifications
 
 <p align="center">
@@ -211,14 +219,6 @@ The catalog also recognizes the rare Proxima Pioneer, Proxima Staffshipper, and 
 
 Run `npm install` and `npm test` for parser checks. For a complete frontend and API preview, install the [Vercel CLI](https://vercel.com/docs/cli) and run `vercel dev`.
 </details>
-
-## GitHub activity
-
-<p align="center">
-  <a href="https://commit-history.com/ranjiGT">
-    <img alt="Ranji Raj's cumulative commit history" src="https://commit-history.com/embed/ranjiGT" width="720"/>
-  </a>
-</p>
 
 ---
 
