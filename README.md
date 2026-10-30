@@ -13,8 +13,6 @@
   <a href="https://www.youtube.com/c/RanjiRaj18"><img alt="YouTube" src="https://img.shields.io/badge/YouTube-FF0033?style=flat-square&logo=youtube&logoColor=white"/></a>
   <a href="https://www.linkedin.com/in/reng99/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white"/></a>
   <a href="https://x.com/iamRanjiRaj"><img alt="X" src="https://img.shields.io/badge/X-111111?style=flat-square&logo=x&logoColor=white"/></a>
-  <a href="https://stackoverflow.com/users/14512983/ranji-raj"><img alt="Stack Overflow" src="https://img.shields.io/badge/Stack_Overflow-F48024?style=flat-square&logo=stackoverflow&logoColor=white"/></a>
-  <a href="https://www.kaggle.com/ranjiraj"><img alt="Kaggle" src="https://img.shields.io/badge/Kaggle-20BEFF?style=flat-square&logo=kaggle&logoColor=white"/></a>
 </p>
 
 <p align="center">
@@ -49,6 +47,10 @@ Group discussed this work at the Developer Conference on June 11, 2026.
 </p>
 
 ## GitHub in the real world
+
+<p align="center">
+  <img src="./github-contribution-history.png" alt="Ranji Raj's GitHub contribution history from 2020 to 2026, showing 1,824 contributions" width="100%" />
+</p>
 
 My GitHub Universe Conference badge from 2025, customized to display my GitHub profile stats.
 
@@ -162,7 +164,6 @@ My GitHub Universe Conference badge from 2025, customized to display my GitHub p
     <a href="#"><img alt="Jupyter" src="https://img.shields.io/badge/Jupyter-F37626.svg?style=flat-square&logo=Jupyter&logoColor=white"></a>
     <a href="#"><img alt="Git" src="https://img.shields.io/badge/Git-F05033.svg?style=flat-square&logo=git&logoColor=white"></a>
     <a href="#"><img alt="GitHub Desktop" src="https://img.shields.io/badge/GitHub%20Desktop-8034A9.svg?style=flat-square&logo=github&logoColor=white"></a>
-    <a href="#"><img alt="Stack Overflow" src="https://img.shields.io/badge/Stack%20Overflow-FE7A16.svg?style=flat-square&logo=stack-overflow&logoColor=white"></a>
     <a href="#"><img alt="Anaconda" src="https://img.shields.io/badge/Anaconda-44A833.svg?style=flat-square&logo=anaconda&logoColor=white"></a>
     <a href="#"><img alt="Tableau" src="https://img.shields.io/badge/Tableau-E97627.svg?style=flat-square&logo=tableau&logoColor=white"></a>
 </p>
@@ -176,57 +177,6 @@ My GitHub Universe Conference badge from 2025, customized to display my GitHub p
 |---|---|---|
 | [nteract/testbook](https://github.com/nteract/testbook) | [Bug report: Return value as None from testbook function](https://github.com/nteract/testbook/issues/143) | Found a bug in the `@testbook` decorator that returned `None` instead of the actual value. Led to fix in [PR #145](https://github.com/nteract/testbook/pull/145). |
 | [jupyterlab/jupyterlab](https://github.com/jupyterlab/jupyterlab) | [Answered: How to center text in markdown and export it to PDF](https://github.com/jupyterlab/jupyterlab/discussions/16687) | Provided the accepted answer explaining that Pandoc ignores `<center>` HTML tags during PDF (LaTeX) conversion, with the correct raw LaTeX and Pandoc Markdown alternatives. |
-
----
-
-## 🏅 Stack Overflow
-
-<p align="center">
-  <a href="https://stackoverflow.com/users/14512983/ranji-raj">
-    <img alt="Stack Overflow reputation" src="https://img.shields.io/stackexchange/stackoverflow/r/14512983?style=for-the-badge&logo=stack-overflow&label=Reputation&color=FE7A16"/>
-  </a>
-  <img alt="Silver badges" src="https://img.shields.io/badge/🥈_Silver_Badges-7-C0C0C0?style=for-the-badge"/>
-  <img alt="Bronze badges" src="https://img.shields.io/badge/🥉_Bronze_Badges-20-CD7F32?style=for-the-badge"/>
-</p>
-
-**Notable badges:** `Necromancer` · `Enthusiast` · `Census` · `Critic` · `Curious` · `Peer Pressure`
-
----
-
-## 📓 Kaggle
-
-<p align="center">
-  <a href="https://www.kaggle.com/ranjirajnair">
-    <img alt="Kaggle Profile" src="https://img.shields.io/badge/Kaggle-ranjirajnair-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white"/>
-  </a>
-</p>
-
-<p align="center">
-  <img alt="Datasets" src="https://img.shields.io/badge/Datasets-1-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white"/>
-  <img alt="Discussions" src="https://img.shields.io/badge/Discussions-1-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white"/>
-  <img alt="Following" src="https://img.shields.io/badge/Following-2-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white"/>
-</p>
-
-| Tier | Category |
-|---|---|
-| 🥈 Contributor | Competitions |
-| 🥈 Contributor | Datasets |
-| 🥈 Contributor | Notebooks |
-| 🥈 Contributor | Discussion |
-
-**Badges earned:**
-
-<p align="center">
-  <img alt="5 Years on Kaggle" title="5 Years on Kaggle" src="https://img.shields.io/badge/🏅_5_Years_on_Kaggle-active-20BEFF?style=flat-square"/>
-  <img alt="Kaggle Community Member" title="Joined Kaggle" src="https://img.shields.io/badge/🤝_Community_Member-joined-20BEFF?style=flat-square"/>
-  <img alt="Competitor" title="Made a competition submission" src="https://img.shields.io/badge/🏆_Competitor-competition-20BEFF?style=flat-square"/>
-  <img alt="Getting Started Competitor" title="Submitted to a Getting Started competition" src="https://img.shields.io/badge/🚀_Getting_Started_Competitor-competition-20BEFF?style=flat-square"/>
-  <img alt="Python Coder" title="Created a Python notebook" src="https://img.shields.io/badge/🐍_Python_Coder-notebooks-20BEFF?style=flat-square"/>
-  <img alt="R Coder" title="Created an R notebook" src="https://img.shields.io/badge/📊_R_Coder-notebooks-20BEFF?style=flat-square"/>
-  <img alt="Dataset Creator" title="Created a dataset" src="https://img.shields.io/badge/🗂️_Dataset_Creator-datasets-20BEFF?style=flat-square"/>
-  <img alt="Learner" title="Completed a Kaggle Learn course" src="https://img.shields.io/badge/💡_Learner-courses-20BEFF?style=flat-square"/>
-  <img alt="Student" title="Completed 5 Kaggle Learn courses" src="https://img.shields.io/badge/🎓_Student-courses-20BEFF?style=flat-square"/>
-</p>
 
 ---
 
