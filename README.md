@@ -82,6 +82,12 @@ My GitHub Universe Conference badge from 2025, customized to display my GitHub p
   <a href="https://learn.microsoft.com/en-us/credentials/certifications/github-copilot/">Certification details on Microsoft Learn</a>
 </p>
 
+<p align="center">
+  <a href="https://www.credly.com/badges/b9d9aa6d-9004-4570-90fd-71b5367b98af/public_url">
+    <img height="35" alt="Microsoft Pro Badge: GitHub Copilot - Proficient on Credly" src="https://img.shields.io/badge/Microsoft%20Pro%20Badge-GitHub%20Copilot%20Proficient-6E40C9?style=for-the-badge&logo=githubcopilot&logoColor=white"/>
+  </a>
+</p>
+
 ## Recent Lessons
 
 <!-- BEGIN YOUTUBE-CARDS -->
