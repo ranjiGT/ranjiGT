@@ -1,4 +1,4 @@
-> [!TIP]
+> [!NOTE]
 > [Nominate @ranjiGT as a GitHub Star](https://stars.github.com/nominate/)
 
 <h1 align="center">Ranji Raj</h1>
