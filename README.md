@@ -1,5 +1,5 @@
 > [!TIP]
-> Enjoying my work? [Nominate me for the GitHub Stars program](https://stars.github.com/nominate/) — I’d be grateful for your support!
+> [Nominate @ranjiGT as a GitHub Star](https://stars.github.com/nominate/)
 
 <h1 align="center">Ranji Raj</h1>
 
