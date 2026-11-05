@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://stars.github.com/nominate/"><img src="./github-stars-nomination-box.svg" alt="Nominate @ranjiGT as a GitHub Star" width="100%" /></a>
+  <a href="https://stars.github.com/nominate/"><img src="./github-stars-nomination-box.svg" alt="📢 Nominate @ranjiGT as a GitHub Star ⭐" width="100%" /></a>
 </p>
 
 <h1 align="center">Ranji Raj</h1>
