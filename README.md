@@ -2,10 +2,6 @@
   <a href="https://stars.github.com/nominate/"><img src="./github-stars-nomination-box.svg" alt="📢 Nominate @ranjiGT as a GitHub Star ⭐" width="100%" /></a>
 </p>
 
-<p align="center">
-  <img src="./contribution-fireworks.svg" alt="Happy Diwali spelled in glowing GitHub contribution squares, with animated fireworks and crackers" width="100%" />
-</p>
-
 <h1 align="center">Ranji Raj</h1>
 
 <p align="center">
